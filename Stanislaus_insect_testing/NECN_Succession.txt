@@ -1,0 +1,124 @@
+LandisData "NECN Succession"	<<"NECN Succession"
+
+Timestep  1
+
+SeedingAlgorithm  WardSeedDispersal
+
+InitialCommunities      	stani1.txt << Generated from Biomass Succession
+InitialCommunitiesMap   	output-community-0.img << Generated from Biomass Succession
+ClimateConfigFile		climate-generator.txt  
+
+SoilDepthMapName				SoilDepth_stan.tif 
+SoilDrainMapName				DrainClass_stan.tif
+SoilBaseFlowMapName				BaseFFrac_stan.tif  
+SoilStormFlowMapName				StormFFrac_stan.tif 
+SoilFieldCapacityMapName			FieldCapacity_stan.tif
+SoilWiltingPointMapName				WiltPoint_stan.tif
+SoilPercentSandMapName				Sand_stan.tif
+SoilPercentClayMapName				Clay_stan.tif
+InitialSOM1CsurfMapName				SOMC_surface_stan.tif 
+InitialSOM1NsurfMapName				SOMNsurface_stan.tif 
+InitialSOM1CsoilMapName				SOMC_soil_stan.tif 
+InitialSOM1NsoilMapName				SOMNsoil_stan.tif 
+InitialSOM2CMapName				SOMC2_stan.tif 
+InitialSOM2NMapName				SOMN2_stan.tif 
+InitialSOM3CMapName				SOMC3_stan.tif
+InitialSOM3NMapName				SOMN3_stan.tif
+InitialDeadWoodSurfaceMapName			SurfaceDead_stan.tif 
+InitialDeadCoarseRootsMapName			DeadCoarseRoots_stan.tif
+
+CalibrateMode 	no
+SmokeModelOutputs yes
+WaterDecayFunction Ratio <<Linear or Ratio
+
+ProbabilityEstablishAdjust 	0.6
+InitialMineralN			7.0
+InitialFineFuels		0.4
+AtmosphericNSlope		0.025
+AtmosphericNIntercept		0.005
+Latitude			39.5
+DenitrificationRate		0.12 <<was 0.5
+DecayRateSurf			0.4
+DecayRateSOM1			1.0
+DecayRateSOM2			0.02 << Was 0.02 from Louise. changed 2/5
+DecayRateSOM3			0.0002
+
+MaximumLAI
+
+>> Shade	Max LAI
+>> Class	
+>> ----------	--------------------	
+	1	1 
+	2	2.5 
+	3	3.5 
+	4	6
+	5	8
+		
+
+LightEstablishmentTable	
+					
+>>	Spp Shade	Probability					
+>>	Class		by Actual Shade					
+>>	 ----------	--------------------					
+>>		0	1	2	3	4	5
+	1	1.0	0.5	0.02	0.0	0.0	0.0
+	2	0.6	1.0	0.5	0.02	0.0	0.0
+	3	0.01	0.6	1.0	0.5	0.02	0.0
+	4	0.0	0.01	0.6	1.0	0.5	0.02
+	5	0.0	0.0	0.01	0.5	1.0	1.0
+		
+SpeciesParameters << some data from Sarah, some arbitrary
+			
+>> Species 	Func				Min			Epi-											
+>>	   ional		GDD	GDD	Jan	Max	Leaf	cormic	Leaf	FRoot	Wood	CRoot	Leaf  	FRoot 	Wood  	CRoot 	Littr 	Annual	Max
+>> 	   Type	N-fix?	Min	Max	Temp	Drought	Long	re-sprout	Lign%	Lign%	Lign%	Lign%	CN    	CN    	CN    	CN    	CN	Biomass	Biomass
+abieconc	4	N	700	2700	-10	0.93	8	N	0.17	0.2	0.25	0.25	30	30	333	222	100	450	100000
+abiemagn	4	N	900	1900	-10	0.91	8	N	0.17	0.2	0.25	0.25	30	30	250	167	100	450	100000
+calodecu	1	N	1400	3100	-18	0.97	4	N	0.1	0.2	0.25	0.25	48	48	500	333	100	400	100000
+juniocci	1	N	400	5500	-10	0.99	6	N	0.25	0.2	0.25	0.25	20	30	333	222	50	380	10000
+pinualbi	4	N	300	2000	-18	0.9	5.5	Y	0.27	0.2	0.25	0.25	80	80	333	222	100	450	10000
+pinucont	4	N	500	2000	-18	0.87	3.5	N	0.25	0.2	0.25	0.25	48	48	500	333	100	450	10000
+pinuflex	4	N	300	2200	-15	0.9	3.5	N	0.28	0.2	0.25	0.25	48	48	250	167	100	450	10000
+pinujeff	1	N	1200	2800	-5	0.95	6	N	0.28	0.2	0.25	0.25	48	48	250	167	100	470	100000
+pinulamb	1	N	1300	2800	-5	0.9	2.5	N	0.17	0.2	0.25	0.25	53	53	278	185	100	480	100000
+pinumont	4	N	500	2000	-18	0.85	7	N	0.31	0.2	0.25	0.25	37	37	500	333	100	450	100000
+pinupond	1	N	500	5500	-9	0.9	5	N	0.24	0.23	0.28	0.32	50	47	400	80	75	470	100000
+poputrem	2	N	600	3000	-10	0.82	1	Y	0.18	0.2	0.25	0.25	62	62	333	222	100	445	10000
+pseumenz	1	N	300	4750	-12	0.7	6	N	0.24	0.3	0.28	0.32	42	36	400	80	77	590	100000
+querchry	2	N	900	3050	0	0.9	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	540	10000
+querdoug	2	N	900	3050	0	0.9	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	540	10000
+querkelo	2	N	1250	3850	-1	0.9	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	540	10000
+querwisl	2	N	1050	3550	-1	0.9	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	540	10000
+sequgiga	1	N	500	3500	-2	0.75	3.5	N	0.17	0.2	0.25	0.25	53	53	278	185	100	650	100000
+tsugmert	1	N	500	1800	-18	0.82	4.5	Y	0.24	0.2	0.25	0.25	80	80	333	222	100	470	90000
+adenfasc	3	N	400	4000	-10	0.99	1.5	Y	0.25	0.2	0.25	0.25	56	56	333	222	100	405	8000
+anngrass	3	N	400	4500	-10	0.99	1.5	Y	0.25	0.2	0.25	0.25	56	56	333	222	100	225	2000
+cercmont	3	N	400	4500	-10	0.99	1.5	Y	0.25	0.2	0.25	0.25	56	56	333	222	100	385	1000
+riparian	2	Y	400	2950	-7	0.5	1	N	0.18	0.15	0.28	0.32	22	25	200	80	28	420	10000
+
+									
+FunctionalGroupParameters << -  estimates from fhmem_century_succession.txt
+>> Woody decay rate from Louie was 1.0. 	
+>> Name		Index	PPDF1	PPDF2	PPDF3	PPDF4	FCFRAC	BTOLAI	KLAI	MAXLAI	PPRPTS2	PPRPTS3	Wood	Month	Age	Leaf 
+>>	 		T-Mean	T-Max	T-shape	T-shape	leaf						DecayR	Wood	Mort	Drop
+>>														Mort	Shape	Month CRFrac	FRFrac
+Conifers	1	20	40	0.05	6.0	0.2	0.0082	10000	10	0.4	0.5	0.2	0.002	10	9	0.1	0.1
+Hardwoods	2	20	40	0.05	7.0	0.3	0.0082	5000	20	0.6	0.5	0.2	0.002	10	9	0.1	0.1	
+Shrub		3	20	42	0.05	8.0	0.3	0.0082	500	5	0.5	0.5	0.2	0.002	10	9	0.1	0.1
+Firs		4	18	38	0.05	6	0.2	0.0082	12000	15	0.5	0.5	0.2	0.002	10	9	0.1	0.1
+
+FireReductionParameters
+>> Based on Stacy Drury's lit review/analysis. See 'Fuel consumption based on fire severity class.docx'
+>>	Severity	WoodLitter	Litter	  Cohort Wood 	Cohort Litter 		SOM
+>>	Fire		Reduct		Reduct	  Reduction	Reduction		Reduction
+	1		0.20		0.75 	  	0	0.1			0.5 <<0.1     
+	2		0.50		1.0		0.1	0.5			0.75 <<0.5
+	3		0.65		1.0		0.2	1.0			1.0
+
+HarvestReductionParameters
+>>	Name			WoodLitter	Litter	SOM		CohortWood	CohortLeaf
+>>				Reduct		Reduct	Reduction	Removal		Removal
+	HandThinning		0.6		0.16	0.10	0.85		0.25 <<0.15 <<Litter was 0.2
+	MechThinning		0.8		0.14	0.10	0.85		0.25 <<0.15
+	Salvage			0.5		0.14	0.1	0.85		0.0 <<0.0
+

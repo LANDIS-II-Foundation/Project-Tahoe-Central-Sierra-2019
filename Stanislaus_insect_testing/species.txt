@@ -1,0 +1,32 @@
+LandisData  Species
+
+>>                      Sexual    Shade  Fire  Seed Disperal Dist  Vegetative   Sprout Age  Post-Fire
+>> Name      Longevity  Maturity  Tol.   Tol.  Effective  Maximum  Reprod Prob  Min   Max   Regen 
+>> ----      ---------  --------  -----  ----  ---------  -------  -----------  ----------  --------
+pinucont	200	7	   1	 1	20	60		0	0	0	none
+pinupond	350	20	   2	 4	35	150		0	0	0	none
+pinulamb	450	15	   3	 4	30	150		0	0	0	none
+pinujeff	450	18	   2	 4	50	350		0	0	0	none
+pinumont	400	12	   1	 4	30	400		0	0	0	none
+pinualbi	600	80	   2	 3	30	5000		0	0	0	none
+sequgiga	3000	150	   1	 5	100	400		0	0	0	serotiny
+abieconc	400	40	   3	 3	30	200		0	0	0	none
+pinuflex	1000	20	   2	 1	30	5000		0	0	0	none
+abiemagn	400	40	   3	 3	30	200		0	0	0	none
+pseumenz	300	15	   2	 3	30	1000		0	0	0	none
+tsugmert	600	20	   5	 1	30	250		0	0	0	none
+calodecu	500	40	   4	 3	30	3000		0	0	0	none
+juniocci	1000	20	   2	 1	2	500		0	0	0	none
+										
+querkelo	300	30	   3	 2	30	1000		0.8	5	300	resprout
+querchry	250	20	   3	 1	30	1000		0.95	5	250	resprout
+querdoug	450	20	   3 	 1	30	1000		0.8	5	250	resprout
+querwisl	400	20	   4	 1	30	1000		0.8	5	200	resprout
+poputrem	175	15	   1	 2	30	7500		0.95	5	175	resprout
+					 					
+adenfasc	100	10	   1	 1	5	10		0.4	3	100	resprout
+cercmont	150	5	   2	 2	50	500		0.95	3	150	resprout
+										
+anngrass	10	1	   1	 1	100	10000		0	0	0	none
+
+riparian	200	5	   1     1      100     3000		0.9     0       150     resprout

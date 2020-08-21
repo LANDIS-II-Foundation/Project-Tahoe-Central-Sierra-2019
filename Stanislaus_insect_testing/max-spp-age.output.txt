@@ -1,0 +1,32 @@
+LandisData  "Max Species Age"
+
+
+Timestep   5
+
+MapNames   max-spp-age/{species}-{timestep}.gis
+
+Species    pinucont	
+	   >>pinupond	
+	   >>pinulamb	
+	   >>pinujeff	
+	   >>pinumont	
+	   >>pinualbi	
+	   >>sequgiga	
+	   >>abieconc	
+	   >>pinuflex	
+	   abiemagn	
+	   >>pseumenz	
+	   >>tsugmert	
+	   >>calodecu	
+	   >>juniocci	
+	   querkelo	
+	   >>querchry	
+	   >>querdoug	
+	   >>querwisl	
+	   >>poputrem	
+	   >>adenfasc	
+	   >>cercmont	
+	   >>anngrass	
+	   >>riparian	
+	   
+	   >>all

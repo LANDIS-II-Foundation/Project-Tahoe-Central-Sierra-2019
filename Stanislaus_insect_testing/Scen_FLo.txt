@@ -1,0 +1,41 @@
+>> The goal for this sensitivity test is to see how management activities affect fire
+>> just using the automatic fuel conversions - ie not forcing a treated stand to become one 
+>> thing or another.
+
+LandisData  Scenario
+
+Duration  50
+
+Species      ../../species.txt
+
+Ecoregions      ../../ecoregionlist.txt
+EcoregionsMap   ../../eco7.gis
+
+CellLength  100 << meters, so cell area = 1 ha
+
+InitialCommunities      ../../TotalInitialCommunity.txt
+InitialCommunitiesMap   ../../initialcommunity_v2.gis
+
+
+>> Succession Extension     Initialization File
+>> --------------------     -------------------
+   "Biomass Succession v2"     ../../biosuccession_v2.txt
+
+>> Disturbance Extensions   Initialization File
+>> ----------------------   -------------------
+   "Dynamic Biomass Fuels"  ../../Fuels-Biomass.txt
+   "Dynamic Fire System"    ../../FIRE-Low.txt
+>>   "Biomass Harvest"        ../../Harvest-AMn-IHi-FishBoth.txt
+
+>> DisturbancesRandomOrder  yes  << optional parameter; default = no
+
+
+>> Other Extensions         Initialization File
+>> ----------------         -------------------
+   "Output Biomass"         ../../output-biomass.txt
+   "Output Biomass AgeClass" ../../bio-age.output.txt
+   "Output Cohort Stats" ../../cohort-stats.output.txt
+   
+
+>>RandomNumberSeed  4,357  << optional parameter; default = the seed is
+                         << randomly generated using the current time

@@ -1,0 +1,255 @@
+LandisData  "Biomass Succession"
+
+Timestep  1
+
+SeedingAlgorithm  WardSeedDispersal
+
+InitialCommunities      	TotalInitialCommunity.txt
+InitialCommunitiesMap   	IC_stan.tif
+
+ClimateConfigFile		./biomass-succession_ClimateGenerator.txt
+
+MinRelativeBiomass
+
+>> Shade	Min Relative Biomass (% Maximum Biomass)
+>> Class	by Ecoregions
+>> ----------	--------------------	
+	        eco1   eco2   	eco3   	eco4	eco5	eco6	eco7
+
+	1	25%	25%	25%	25%	25%	25%	25%
+	2	35%	35%	35%	35%	35%	35%	35%
+	3	55%	55%	55%	55%	55%	55%	55%
+	4	80%	80%	80%	80%	80%	80%	80%
+	5	100%	100%	100%	100%	100%	100%	100%
+
+SufficientLight
+>> Spp Shade	Probability
+>> Class	by Actual Shade
+>> ----------	--------------------	
+>>		0	1	2	3	4	5
+	1	1.0	0.0	0.0	0.0	0.0	0.0
+	2	1.0	1.0	0.0	0.0	0.0	0.0
+	3	1.0	1.0	1.0	0.0	0.0	0.0
+	4	1.0	1.0	1.0	1.0	0.0	0.0
+	5	0.0	0.0	1.0	1.0	1.0	1.0
+
+SpeciesParameters
+
+>> Species	Leaf		Bole		Mortality	Growth	Leaf
+>>		Longevity	DecayRate	ShapeParam	Shape	Lignin
+>> --------     ---------	---------	----------	------
+querdoug	1.00		0.10		10.00		0.25	0.1
+querkelo	1.00		0.10		10.00		0.25	0.1
+abiemagn	4.00		0.10		10.00		0.25	0.1
+querchry	1.00		0.10		10.00		0.25	0.1
+pseumenz	2.25		0.10		10.00		0.25	0.1
+sequgiga	4.00		0.10		10.00		0.25	0.1
+calodecu	4.00		0.10		10.00		0.25	0.1
+querwisl	1.00		0.10		10.00		0.25	0.1
+pinujeff	2.25		0.10		10.00		0.25	0.1
+pinuflex	2.25		0.10		10.00		0.25	0.1
+pinucont	2.25		0.10		10.00		0.25	0.1
+tsugmert	4.00		0.10		10.00		0.25	0.1
+pinupond	2.25		0.10		10.00		0.25	0.1
+poputrem	1.00		0.10		10.00		0.25	0.1
+pinulamb	2.25		0.10		10.00		0.25	0.1
+juniocci	4.00		0.10		10.00		0.25	0.1
+pinumont	2.25		0.10		10.00		0.25	0.1
+abieconc	4.00		0.10		10.00		0.25	0.1
+pinualbi	2.25		0.10		10.00		0.25	0.1
+adenfasc	1.00		0.10		10.00		0.25	0.1
+cercmont	1.00		0.10		10.00		0.25	0.1
+anngrass	1.00		0.10		10.00		0.25	0.1
+
+
+EcoregionParameters
+>>	AET
+>>	mm
+eco1	1000
+eco2	1000
+eco3	1000
+eco4	1000
+eco5	1000
+eco6	1000
+eco7	1000
+
+DynamicInputFile    			biomass-succession_DynamicInputs.txt 
+
+FireReductionParameters
+>>	Severity	WoodLitter	Litter	
+>>	Fire		Reduct		Reduct	
+	1		0.0		0.5	
+	2		0.0		0.75	
+	3		0.0		1.0	
+	4		0.0		1.0	
+	5		0.0		1.0	
+
+HarvestReductionParameters
+>>	Name		WoodLitter	Litter	Cohort		Cohort
+>>			Reduct		Reduct	WoodRemoval	LeafRemoval
+	MaxAgeClearcut	0.5		0.15	0.8		0.0
+	PatchCutting	1.0		1.0	1.0		0.0
+
+		 	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

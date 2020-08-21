@@ -1,0 +1,61 @@
+LandisData  "Dynamic Biomass Fuels"
+
+Timestep  5
+
+>> 		 Fuel 
+>> Species 	 Coefficient 
+>> -------- 	----------- 
+juniocci	0.75
+calodecu	0.75
+
+
+HardwoodMaximum 15
+
+DeadFirMaxAge 25
+
+
+FuelTypes
+>> Fuel Type 	BaseType	Age Range	Species
+>> ---------	---------	---------	----------
+   1		Conifer		0 to 50		juniocci abieconc pseumenz pinupond pinulamb calodecu -pinucont -sequgiga -tsugmert -abiemagn << young mixed conifer
+   2      	Conifer		51 to 100 	juniocci abieconc pseumenz pinupond pinulamb calodecu -pinucont -sequgiga -tsugmert -abiemagn << mid-aged mixed conifer,
+   3		Conifer		101 to 1000	juniocci abieconc pseumenz pinupond pinulamb calodecu -pinucont -sequgiga -tsugmert -abiemagn << old mixed conifer
+   
+   4		Conifer		0 to 50		pinulamb pinujeff pinumont pinualbi abieconc pinupond -pinucont -sequgiga -tsugmert -abiemagn 
+   5		Conifer 	51 to 100	pinulamb pinujeff pinumont pinualbi abieconc pinupond -pinucont -sequgiga -tsugmert -abiemagn << immature pine/fir
+   6		Conifer		101 to 1000	pinulamb pinujeff pinumont pinualbi abieconc pinupond -pinucont -sequgiga -tsugmert -abiemagn << old pine/fir, 
+   
+   7		Conifer		0 to 50		abiemagn
+   8		Conifer		51 to 100	abiemagn   << mid-aged red fir
+   9		Conifer		101 to 1000	abiemagn   << old red fir
+
+   10		Conifer		0 to 50		sequgiga
+   11		Conifer		51 to 100	sequgiga   << mid-aged sequoia, check species inclusions
+   12		Conifer		101 to 3000	sequgiga   << old sequoia
+   
+   13		Conifer		0 to 50		pinucont tsugmert   
+   14		Conifer		51 to 100	pinucont tsugmert << mid-aged lodgepole, check species inclusions
+   15		Conifer	 	101 to 1000	pinucont tsugmert << old lodgepole
+
+   16		Conifer		0 to 50		cercmont querchry querwisl adenfasc   
+   17		Conifer		51 to 100	cercmont querchry querwisl adenfasc << brush between 50-80 years
+   18		Conifer		101 to 1000	cercmont querchry querwisl adenfasc << old brush (all)
+   
+   19		Deciduous	0 to 50         querkelo querdoug poputrem riparian << young deciduous
+   20		Deciduous	51 to 1000	querkelo querdoug poputrem riparian << immature to old deciduous
+ 
+
+
+DisturbanceConversionTable
+>> FuelType	Duration       Prescription
+>> ---------	---------	--------
+   90		15		ThinBurn1
+   90		15		RxFire
+   91		15		ThinBurn2
+   91		15		MxFire
+
+
+MapFileNames		fireoutput/FuelType-{timestep}.gis 
+PctConiferFileName	fireoutput/PctConifer-{timestep}.gis
+PctDeadFirFileName	fireoutput/PctDeadFir-{timestep}.gis
+

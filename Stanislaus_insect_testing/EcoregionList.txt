@@ -1,0 +1,14 @@
+LandisData  Ecoregions
+
+>>         Map
+>> Active  Code  Name   Description
+>> ------  ----  -----  -----------
+      no     0   eco0   "outside universe"
+      yes    1   eco1   "highest elevation"
+      yes    2   eco2   "mid-low elevation"
+      yes    3   eco3   "mid elevation"
+      yes    4   eco4   "southern plateau"
+      yes    5   eco5   "mid-high elevation"
+      yes    6   eco6   "lowest elevation"
+      yes    7   eco7   "non-forested chaparral"
+

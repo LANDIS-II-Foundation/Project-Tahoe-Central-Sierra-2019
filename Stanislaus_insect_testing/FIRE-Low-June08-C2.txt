@@ -1,0 +1,108 @@
+LandisData  "Dynamic Fire System"
+
+Timestep  5
+>>EventSizeType size_based  <<or 'duration_based'
+EventSizeType	duration_based  <<or 'size_based'
+
+BuildUpIndex	yes	<< yes or no; Y or N
+
+>> Fire Sizes (parameters applied for both size and duration based)
+>> Code Name 	mu 	Sigma 	Max	SpFMCLo SpFMCHi SpHiPropSumFMCLo SumFMCHiSumHiProp FallFMCLo FallFMCHi FallHiProp OpenFuelType NumFires 
+>> --------- -- ----- 	-----   ------	------- -------- -------- -------- --------- --------- --------- ---------- ------------ ----
+0	outside	0	0	0	0	0	0	0	0	0	0	0	0	0	 0
+1  	mid	4.95    0.9  	4500	135   	175  	0.05   	85  	100  	0.89    75    	90   	0.10     0  	215
+2 	low	4.93    0.9 	2500	125   	150 	0.05  	85  	100  	0.89    75    	90   	0.10     0  	1580
+3  	high	5.46    0.9 	5500	145   	195     0.05  	85  	100 	0.89   	75    	90   	0.10     0  	755
+4  	lowwui 	4.72    0.9 	2000	125   	150     0.05   	85  	100  	0.89    75    	90   	0.10     0  	2180
+5	midwui 	4.72    0.9	2500	135	175	0.05	85	100	0.89	75	90	0.10	 0	375
+6	highwui	4.72    0.9	2500	145	195	0.05	85	100	0.89	75	90	0.10	 0	335
+
+InitialFireEcoregionsMap  ../../fireregions.gis
+
+DynamicEcoregionTable
+>>Year	FileName
+
+
+GroundSlopeFile  ../../slope.gis
+UphillSlopeAzimuthMap  ../../upslope.gis
+
+SeasonTable
+>> Name	 Lstatus  	Proportion 	%Curing
+>>  ------- 	 --------- 	 -------------- 	 -------
+Spring	LeafOff	0.04		51
+Summer 	LeafOn   	0.90 		100
+Fall   	LeafOff  	0.06  	100
+
+InitialWeatherDatabase  ../../LowFire.csv
+
+DynamicWeatherTable
+>>Year    FileName
+>>	5    FWI_Sample_high.mdb
+
+FuelTypeTable
+>> Fuel Input Table
+>> Allowed base types:  Conifer, ConiferPlantation, Deciduous, Slash, Open
+>> Allowed surface types:  See CFPS
+>>Index	BaseType  SurfaceType 	IgnPrb 	a 	b 	c 	  q 	BUI 	maxBE 	CBH
+  >>0	NoFuel 	  O1a		0.000	 0	0.0000	10.0	1.00	 1	1.000	10
+
+  1	Conifer   C2		0.01	110	0.0282	1.5	0.50	500	1.321	1  << young mixed conifer
+  2	Conifer	  C2		0.01	110	0.0282	1.5	0.70	64	1.321	2  << mid-aged mixed conifer
+  3	Conifer	  C4		0.01	30	0.0800	3.0	0.80	62	1.197	4  << old mixed conifer 
+
+  4	Conifer   C2		0.01	110	0.0282	1.5	0.50	500	1.321	1  << young pine/white fir
+  5	Conifer	  C3		0.01	72	0.05	3.5	0.70	62	1.261	2  << mid-aged pine/white fir 
+  6	Conifer   C3		0.01	72	0.05	3.5	0.70	62	1.261	5  << old pine/white fir 
+  
+  7	Conifer   C2		0.01	110	0.0282	1.5	0.50	500	1.321	1  << young red-fir
+  8	Conifer	  C1		0.01	90	0.0649	4.5	0.90	72	1.076	2  << mid-aged red fir
+  9	Conifer	  C1		0.01	90	0.0649	4.5	0.90	72	1.076	8  << old red fir
+  
+  10	Conifer   C2		0.01	110	0.0282	1.5	0.50	500	1.321	1  << young sequoia
+  11	Conifer   C6		0.01	30	0.0800	3.0	0.80	62	1.197	3  << mid-aged sequoia
+  12	Conifer   C6		0.01	30	0.0800	3.0	0.80	62	1.197	10 << old sequoia
+
+  13	Conifer   C2		0.01	110	0.0282	1.5	0.50	500	1.321	1  << young lodgepole
+  14	Conifer   C6		0.01	30	0.0800	3.0	0.80	62	1.197	2  << mid-aged lodgepole
+  15	Conifer   C6		0.01	47	0.0800	3.5	0.70	62	1.197	5  << old lodgepole
+  
+  16	Conifer   C2		0.01	110	0.0282	1.5	0.70	64	1.321	1  << young chaparral
+  17	Conifer   C2		0.02	110	0.0282	1.5	0.70	64	1.321	1  << mid-aged chaparral
+  18	Conifer   C2		0.02	110	0.0282	1.5	0.70	64	1.321	1  << old chaparral (all)
+  
+  >>19	Deciduous D1		0.01	30	0.0232	1.6	0.90	32	1.179	1  <<all deciduous up to 40
+  >>20	Deciduous D1		0.01	30	0.0232	1.6	0.90	32	1.179	2  <<blue/black oak
+  
+  19	Deciduous C7		0.01	14	0.12376	2.827	0.90	32	1.179	1  <<all deciduous up to 40 [TL6]
+  20	Deciduous C7		0.01	14	0.12376	2.827	0.90	32	1.179	2  <<blue/black oak         [TL6]
+  
+  >>19	Deciduous D1		0.01	89	0.00044	0.715	0.90	32	1.179	1  <<all deciduous up to 40 [TL7]
+  >>20	Deciduous D1		0.01	89	0.00044	0.715	0.90	32	1.179	2  <<blue/black oak         [TL7]
+  
+  30	Open	  O1a		0.01	190	0.0310	1.4	1.0	01	1.000	0
+  31	Open      O1b		0.01	250	0.0350	1.7	1.0	01	1.000	0
+  
+  32	ConiferPlantation  C5	0.001	30	0.0697	4.0	0.80	56	1.220	10
+  33	ConiferPlantation  C7	0.001	45	0.0305	2.0	0.85	106	1.134	4
+  34	ConiferPlantation  C6	0.001	30	0.0800	3.0	0.80	62	1.197	10
+  35	ConiferPlantation  C5	0.001	30	0.0697	4.0	0.80	56	1.220	3
+  86	Conifer	  C6		0.000	 0	0.0000	10.0	1.00	 1	1.000	10
+  
+  90	Conifer	  C1		0.0001	30	0.0232	1.6	0.50	500	1.179	2
+  91	Conifer	  C1		0.0001	6	0.0649	4.5	0.50	500	1.076	5
+
+
+SeverityCalibrationFactor  0.003	<< ALEX, this is where I left off with the severity calibration.  This looked 'good'.
+
+FireDamageTable
+>> Cohort Age       FireSeverity - 
+>> % of longevity   FireTolerance
+>> --------------   --------------
+     20%               -2
+     50%               -1
+     85%                0
+    100%                1
+
+MapNames  fireoutput/severity-{timestep}.gis
+LogFile   fireoutput/log.csv
+SummaryLogFile fireoutput/summary-log.csv

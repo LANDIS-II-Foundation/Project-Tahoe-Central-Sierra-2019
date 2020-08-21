@@ -1,0 +1,11 @@
+LandisData "Climate Config"				
+		
+ClimateTimeSeries			Daily_SequencedYears
+ClimateFile				sierra_2007_idaho.csv
+ClimateFileFormat			Daily_Temp-K_Precip-mmDay
+
+SpinUpClimateTimeSeries			Daily_AverageAllYears
+SpinUpClimateFile			sierra_2007_idaho.csv
+SpinUpClimateFileFormat			Daily_Temp-K_Precip-mmDay
+
+>> UsingClimateFire	yes  << Optional parameter; default is no.
