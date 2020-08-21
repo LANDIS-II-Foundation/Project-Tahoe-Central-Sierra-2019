@@ -1,0 +1,67 @@
+LandisData "BDA Agent"
+
+BDAAgentName		WPBR_low
+BDPCalibrator		1
+SRDMode			mean
+
+>>----------------------------------
+>> BDA DISTURBANE REGIME PARAMETERS
+>>----------------------------------
+
+>>-------- Regional Outbreak Inputs -------------
+OutbreakPattern Climate << CyclicNormal or CyclicUniform, or ClimateLibrary 
+VariableName "CWD+WinterT"
+Threshold1 510
+Threshold2 0
+OutbreakLag 0
+TimeSinceLastClimate 7
+
+>>MaxInterval        25
+>>MinInterval        10
+>>TimeSinceLastEpidemic 5 << years
+TemporalType variablepulse << pulse or variablepulse
+MinROS             0
+MaxROS             3
+
+>>-------- Dispersal Inputs ----------------------
+Dispersal		yes <<yes or no   
+DispersalRate		500	<<meters/year  Jactel 1991. This is for lps sexdentatus
+EpidemicThresh		0.01
+InitialEpicenterNum	1000
+OutbreakEpicenterCoeff	0.001
+OutbreakEpicenterThresh 0.0
+SeedEpicenter		no	<<yes or no
+SeedEpicenterCoeff	0.01
+DispersalTemplate	12N	<<MaxRadius, 4N,
+				<<8N, 12N, or 24N
+
+>>-------- Neighborhood Resource Inputs -----------
+NeighborFlag	no	<<yes or no  No aggregation pheremone. Follows host volatiles, USFS Fir Engraver Facts
+NeighborSpeedUp	2x	<<none, 2x, 3x, 
+			<<or 4x
+NeighborRadius	1000	<<meters   I'm basing this on max dispersal distance basically. Jactel 1991 lps sexdentatus
+NeighborShape	uniform	<<uniform, linear, 
+			<<or gaussian
+NeighborWeight	10
+
+>>-- Intensity Class Thresholds --
+>>IntensityClass1_BDP 	0.0 -- Hardwired value
+IntensityClass2_BDP 	0.1
+IntensityClass3_BDP 	0.2
+
+>>EcoregionModifiers
+>>Ecoregion	Modifier
+>>eco1		0.16
+>>eco2		-0.16
+
+DisturbanceModifiers
+>>Type	Duration	Value
+>>Wind	20		0.33
+>>	1.0 10	 Fire	<<Schwilk 2006
+
+BDASpeciesParameters << trees below 10cm are immune Ferrel 1994
+>>                                        Susceptibility   <<Schwilk 2006, Mortality check '%Mortality Beetles'. All mort is 11-13% according to Egen 
+>>Species  MinorHost  2ndHost  MajorHost  Class3   Class2   Class1	CFS
+>>Name     Age        Age      Age        Age      Age      Age		Conifer
+>> -----------------------------------------------------------------------------
+PinuLamb	30	0.4      50 0.3	80	0.3            20 0.05	50	0.04    80	0.04	yes

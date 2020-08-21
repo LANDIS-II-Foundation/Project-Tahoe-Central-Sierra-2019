@@ -1,0 +1,56 @@
+LandisData	Species											
+>>							Disp 		Veg	Sprout		
+>>			Sexual	Shade	Fire	Seed 	Maximum		Min	Max	Post-Fire	
+>>	Name	Long	Maturit	Tol.	Tol.	Effecti	Dist	Rep P	Age	Age	Regen	
+>>	----	-------	-----	-----	----	------  -------	-----	----	-----	--------	--------	
+	AbieConc	450	35	4	3	30	500	0	0	0	none	
+	AbieMagn	500	40	4	4	30	500	0	0	0	none	
+	CaloDecu	500	30	3	5	30	1000	0	0	0	none	
+	FX_R_SEED	90	5	1	1	30	500	0.75	5	70	resprout	<<n-fixer
+	NOFX_R_SEED	90	5	1	1	30	500	0.75	5	70	resprout	<<n-fixer
+	NOFX_NOR_SEED	90	5	2	1	30	1000	0	0	0	none	
+	PinuAlbi	900	30	3	2	30	2500	0.0001	100	900	none	
+	PinuCont	270	7	1	2	30	300	0	0	0	none	
+	PinuJeff	500	25	2	5	50	300	0	0	0	none	
+	PinuLamb	550	20	3	5	30	400	0	0	0	none	
+	PinuMont	550	18	3	4	30	800	0	0	0	none	
+	PopuTrem	190	15	1	2	200	1000	0.9	1	175	resprout	
+	TsugMert	800	20	5	1	30	800	0.0005	100	800	none	
+	AcerMacr	350	10	1	2	50	450	0.4	1	300	resprout 	
+	AescCali	200	10	3	1	30	100	0.8	2	200	resprout	
+	AlnuRhom	270	7	2	2	200	1000	0.2	2	200	resprout	<<n-fixer
+>>	AlnuRubr	250	7	2	2	400	1000	0.2	2	200	resprout	<<n-fixer
+	ArbuMenz	350	5	2	2	30	1000	0.8	4	300	resprout	
+>>	CercLedi	1500	10	2	2	30	300	0.3	1	1500	resprout	<<n-fixer
+>>	ChryChry	250	40	3	2	100	800	0.8	2	200	resprout	
+	CornNutt	120	10	4	1	30	300	0.8	2	100	resprout	
+	JuniOcci	1000	20	2	1	60	500	0	0	0	none	
+	LithDens	270	15	4	2	100	400	0.8	2	200	resprout	
+	PinuAtte	140	10	1	1	30	2000	0	0	0	none	
+>>	PinuCoul	500	12	2	3	30	300	0	0	0	none	
+>>	PinuFlex	1000	30	2	2	30	300	0	0	0	none	
+	PinuMono	1000	30	2	1	30	3000	0	0	0	none	
+	PinuPond	600	10	1	5	30	2000	0	0	0	none	
+	PinuSabi	300	20	1	3	30	200	0	0	0	none	
+	PinuWash	600	10	1	5	30	2000	0	0	0	none	<<subspecies of ponderosa
+>>	PopuBals	200	7	1	1	30	500	0.7	1	200	resprout	
+	PseuMenz	650	15	3	3	140	2000	0	0	0	none	
+	QuerChry	270	20	4	2	100	1000	0.95	1	200	resprout	
+	QuerDoug	350	20	2	2	100	500	0.8	3	200	resprout	
+	QuerGarr	350	40	2	2	100	700	0.8	3	300	resprout	
+	QuerKell	300	30	3	2	100	700	0.9	3	250	resprout	
+>>	QuerLoba	500	20	3	3	100	500	0.7	3	300	resprout	
+	QuerWisl	350	20	3	1	100	800	0.6	3	300	resprout	
+>>	SequGiga	2500	20	2	5	100	300	0	0	0	none	
+	TaxuBrev	400	12	1	1	30	300	0.1	10	60	resprout	
+	TorrCali	300	10	4	1	30	300	0	0	0	none	<<evergreen non-con
+	UmbeCali	400	30	4	1	30	300	0.3	1	200	resprout	<<evergreen non-con
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+LandisData  "Output Biomass Community"
+
+Timestep  20

@@ -1,0 +1,3063 @@
+LandisData "Biomass Harvest"  <<edited 7-10-20  
+
+Timestep 1
+ManagementAreas "./tz1_20_ssp2_v3.tif"
+Stands	"./stands1_ssp2_yr20_v5.tif"
+
+>> -----------------------------------------
+>> PRESCRIPTIONS
+
+Prescription    PIF_CC_28			
+StandRanking Random			
+MinimumBiomass 4506			
+MinimumTimeSinceLastHarvest 5	
+SiteSelection   CompleteStandSpread 8  12	
+MinTimeSinceDamage	5		
+CohortsRemoved  ClearCut			
+
+Prescription    PIF_CC_30			
+StandRanking Random			
+MinimumBiomass 4905			
+MinimumTimeSinceLastHarvest 10	
+SiteSelection   CompleteStandSpread 8  12	
+MinTimeSinceDamage	10	
+CohortsRemoved  ClearCut
+		
+Prescription    PIF_CC_32			
+StandRanking Random			
+MinimumBiomass 4201			
+MinimumTimeSinceLastHarvest 20	
+SiteSelection   CompleteStandSpread 8  12	
+MinTimeSinceDamage	20
+CohortsRemoved  ClearCut
+
+Prescription    PIF_CC_34			
+StandRanking Random			
+MinimumBiomass 4617			
+MinimumTimeSinceLastHarvest 30	
+SiteSelection   CompleteStandSpread 8  12	
+MinTimeSinceDamage	30	
+CohortsRemoved  ClearCut	
+	
+Prescription    PIF_CC_36			
+StandRanking Random			
+MinimumBiomass 5015			
+MinimumTimeSinceLastHarvest 40	
+SiteSelection   CompleteStandSpread 8  12	
+MinTimeSinceDamage	40
+CohortsRemoved  ClearCut	
+
+Prescription    PIF_PCT_29
+StandRanking Random			
+MinimumBiomass 4506			
+MinimumTimeSinceLastHarvest 5	
+SiteSelection   CompleteStandSpread 20 36 	
+MinTimeSinceDamage	5		
+CohortsRemoved	SpeciesList		
+AbieConc	All			
+AbieMagn	All			
+CaloDecu	All			
+JuniOcci		All			
+PinuAlbi	1-79	(90%)		
+PinuCont	1-68	(90%)		
+PinuJeff		1-68	(90%)		
+PinuLamb	1-57	(90%)		
+PinuMont	1-81	(90%)		
+PinuPond	1-59	(90%)		
+PinuSabi	1-50	(90%)		
+PinuWash	1-59	(90%)		
+PseuMenz	All			
+TsugMert	All	
+		
+Prescription    PIF_PCT_31		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PIF_PCT_33		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PIF_PCT_35		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PIF_PCT_37		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    FED_SGH_10		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_12		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_14		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_16		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    HAND_39		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_41		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_43		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_45		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_47		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_11		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_13		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_15		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_17		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    PNIF_SG_38		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_40		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_42		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_44		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_46		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_10		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_12		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_14		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_16		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    HAND_19		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_21		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_23		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_25		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_27		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_18		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_20		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_22		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_24		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_26		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    PNIF_SG_18		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_20		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_22		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_24		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    PNIF_SG_26		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff		1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All
+	
+Prescription    FED_SGH_2		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_4		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_6		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_8		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    HAND_2		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_4		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_6		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_8		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+		
+Prescription    HAND_1		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_3		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_5		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_7		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_9		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_48		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_50		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_52		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_54		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_56		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+ 
+Prescription    HAND_49		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_51		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_53		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_55		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_57		
+StandRanking Random		
+MinimumBiomass 5015		
+MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+
+>>second_half		
+		
+Prescription    PIF_CC_28_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 8  12		
+>>MinTimeSinceDamage	5	
+CohortsRemoved  ClearCut		
+		
+Prescription    PIF_CC_30_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 8  12		
+>>MinTimeSinceDamage	10
+CohortsRemoved  ClearCut		
+		
+Prescription    PIF_CC_32_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 8  12		
+>>MinTimeSinceDamage	30
+CohortsRemoved  ClearCut		
+		
+Prescription    PIF_CC_34_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 8  12		
+>>MinTimeSinceDamage	30
+CohortsRemoved  ClearCut		
+		
+Prescription    PIF_CC_36_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 8  12		
+>>MinTimeSinceDamage	40
+CohortsRemoved  ClearCut		
+		
+Prescription    PIF_PCT_29_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	1-59	(90%)	
+TsugMert	All	
+		
+Prescription    PIF_PCT_31_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	1-59	(90%)	
+TsugMert	All	
+		
+Prescription    PIF_PCT_33_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	1-59	(90%)	
+TsugMert	All	
+		
+Prescription    PIF_PCT_35_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	1-59	(90%)	
+TsugMert	All	
+		
+Prescription    PIF_PCT_37_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	1-59	(90%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_10_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_12_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_14_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    FED_SGH_16_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_39_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_41_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_43_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_45_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_47_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_11_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_13_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_15_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_17_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_SG_38_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_40_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_42_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_44_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_46_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	40
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_10_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_12_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_14_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    PNIF_SG_16_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+TsugMert	All	
+		
+Prescription    HAND_19_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_21_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved			SpeciesList			
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_23_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20		
+CohortsRemoved			SpeciesList			
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_25_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved			SpeciesList			
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    HAND_27_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved			SpeciesList			
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+		
+Prescription    PNIF_PCT_18		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 5		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_20		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_22		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_24		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_26		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_SG_18_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 5		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    PNIF_SG_20_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    PNIF_SG_22_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    PNIF_SG_24_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    PNIF_SG_26_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuCont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuJeff	1-68	(95%)	69-80	(90%)	81-90	(70%)	91-100	(60%)	101-120	(35%)	121-140	(10%)		
+PinuLamb	1-57	(95%)	58-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuMont	1-79	(95%)	80-100	(90%)	101-120	(80%)	121-140	(70%)	141-160	(40%)	161-175	(30%)	176-200	(10%)
+PinuPond	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuSabi	1-50	(95%)	51-65	(85%)	66-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PinuWash	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+
+
+Prescription    FED_SGH_2_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    FED_SGH_4_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    FED_SGH_6_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    FED_SGH_8_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuCont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuJeff	1-68	(97%)	69-80	(92%)	81-90	(75%)	91-100	(65%)	101-120	(45%)	121-140	(25%)		
+PinuLamb	1-57	(97%)	58-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuMont	1-79	(97%)	80-100	(92%)	101-120	(85%)	121-140	(75%)	141-160	(50%)	161-175	(35%)	176-200	(20%)
+PinuPond	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuSabi	1-50	(97%)	51-65	(90%)	66-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PinuWash	1-59	(97%)	60-70	(90%)	71-85	(65%)	86-95	(55%)	96-110	(35%)	111-125	(25%)		
+PseuMenz	1-59	(95%)	60-70	(85%)	71-85	(60%)	86-95	(50%)	96-110	(25%)	111-125	(10%)			
+TsugMert	All	
+		
+Prescription    PNIF_PCT_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage	5	
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_4		
+StandRanking Random		
+MinimumBiomass 4905		
+MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	10
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_6		
+StandRanking Random		
+MinimumBiomass 4201		
+MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	20
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    PNIF_PCT_8		
+StandRanking Random		
+MinimumBiomass 4617		
+MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage	30
+CohortsRemoved	SpeciesList	
+AbieConc	All	
+AbieMagn	All	
+CaloDecu	All	
+JuniOcci	All	
+PinuAlbi	1-79	(90%)
+PinuCont	1-68	(90%)
+PinuJeff	1-68	(90%)
+PinuLamb	1-57	(90%)
+PinuMont	1-81	(90%)
+PinuPond	1-59	(90%)
+PinuSabi	1-50	(90%)
+PinuWash	1-59	(90%)
+PseuMenz	All	
+TsugMert	All	
+		
+Prescription    HAND_1_2		
+StandRanking Random		
+MinimumBiomass 4506		
+MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_3_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_5_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_7_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_9_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_48_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_50_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_52_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_54_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_56_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	 
+Prescription    HAND_49_2		
+StandRanking Random		
+MinimumBiomass 4506		
+>>MinimumTimeSinceLastHarvest 5		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 5		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+Prescription    HAND_51_2		
+StandRanking Random		
+MinimumBiomass 4905		
+>>MinimumTimeSinceLastHarvest 10		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 10		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+	
+Prescription    HAND_53_2		
+StandRanking Random		
+MinimumBiomass 4201		
+>>MinimumTimeSinceLastHarvest 20		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 20	
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_55_2		
+StandRanking Random		
+MinimumBiomass 4617		
+>>MinimumTimeSinceLastHarvest 30		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 30		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)	
+
+Prescription    HAND_57_2		
+StandRanking Random		
+MinimumBiomass 5015		
+>>MinimumTimeSinceLastHarvest 40		
+SiteSelection   CompleteStandSpread 20 36 		
+>>MinTimeSinceDamage 40		
+CohortsRemoved		SpeciesList
+AbieConc	1-60	(66%)	61-70	(39%)		
+AbieMagn	1-60	(66%)	61-71	(39%)		
+CaloDecu	1-64	(66%)	65-78	(39%)		
+JuniOcci	All	
+PinuAlbi	1-73	(66%)	74-87	(32%)		
+PinuCont	1-73	(66%)	74-88	(32%)		
+PinuJeff	1-52	(66%)	53-68	(39%)		
+PinuLamb	1-52	(66%)	53-64	(39%)		
+PinuMont	1-73	(66%)	74-88	(32%)		
+PinuPond	1-52	(66%)	53-68	(39%)		
+PinuSabi	1-52	(66%)	53-64	(39%)		
+PinuWash	1-52	(66%)	53-60	(39%)		
+PseuMenz	1-52	(66%)	53-56	(39%)		
+TsugMert	1-60	(66%)	61-71	(39%)		
+
+>>-----------------------------------------------------------------
+>> PRESCRIPTION IMPLEMENTATION 
+
+>>Areas
+>>	28	Private Industrial	MZ1-10
+>>	29	Private Industrial	MZ1-10-g30
+>>	30	Private Industrial	MZ1-15
+>>	31	Private Industrial	MZ1-15-g30
+>>	32	Private Industrial	MZ1-30
+>>	33	Private Industrial	MZ1-30-g30
+>>	34	Private Industrial	MZ1-40
+>>	35	Private Industrial	MZ1-40-g30
+>>	36	Private Industrial	MZ1-50
+>>	38	Private Non Industrial	MZ2-10
+>>	39	Private Non Industrial	MZ2-10-g30
+>>	40	Private Non Industrial	MZ2-15
+>>	41	Private Non Industrial	MZ2-15-g30
+>>	42	Private Non Industrial	MZ2-30
+>>	43	Private Non Industrial	MZ2-30-g30
+>>	44	Private Non Industrial	MZ2-40
+>>	45	Private Non Industrial	MZ2-40-g30
+>>	46	Private Non Industrial	MZ2-50
+>>	47	Private Non Industrial	MZ2-50-g30
+>>	18	iCLUSE Threat - 1.25 miles from Developed	MZ3-10
+>>	19	iCLUSE Threat - 1.25 miles from Developed	MZ3-10-g30
+>>	20	iCLUSE Threat - 1.25 miles from Developed	MZ3-15
+>>	21	iCLUSE Threat - 1.25 miles from Developed	MZ3-15-g30
+>>	22	iCLUSE Threat - 1.25 miles from Developed	MZ3-30
+>>	23	iCLUSE Threat - 1.25 miles from Developed	MZ3-30-g30
+>>	24	iCLUSE Threat - 1.25 miles from Developed	MZ3-40
+>>	25	iCLUSE Threat - 1.25 miles from Developed	MZ3-40-g30
+>>	26	iCLUSE Threat - 1.25 miles from Developed	MZ3-50
+>>	27	iCLUSE Threat - 1.25 miles from Developed	MZ3-50-g30
+>>	10	iCLUSE Defense - 0.25 miles from Developed	MZ4-10
+>>	11	iCLUSE Defense - 0.25 miles from Developed	MZ4-10-g30
+>>	12	iCLUSE Defense - 0.25 miles from Developed	MZ4-15
+>>	13	iCLUSE Defense - 0.25 miles from Developed	MZ4-15-g30
+>>	14	iCLUSE Defense - 0.25 miles from Developed	MZ4-30
+>>	15	iCLUSE Defense - 0.25 miles from Developed	MZ4-30-g30
+>>	16	iCLUSE Defense - 0.25 miles from Developed	MZ4-40
+>>	17	iCLUSE Defense - 0.25 miles from Developed	MZ4-40-g30
+>>	48	Roadless	MZ5-10
+>>	49	Roadless	MZ5-10-g30
+>>	50	Roadless	MZ5-15
+>>	51	Roadless	MZ5-15-g30
+>>	52	Roadless	MZ5-30
+>>	53	Roadless	MZ5-30-g30
+>>	54	Roadless	MZ5-40
+>>	55	Roadless	MZ5-40-g30
+>>	56	Roadless	MZ5-50
+>>	57	Roadless	MZ5-50-g30
+>>	58	Wilderness	MZ6
+>>	0	Forest- outside WUI	MZ7-10
+>>	1	Forest- outside WUI	MZ7-10-g30
+>>	2	Forest- outside WUI	MZ7-15
+>>	3	Forest- outside WUI	MZ7-15-g30
+>>	4	Forest- outside WUI	MZ7-30
+>>	5	Forest- outside WUI	MZ7-30-g30
+>>	6	Forest- outside WUI	MZ7-40
+>>	7	Forest- outside WUI	MZ7-40-g30
+>>	8	Forest- outside WUI	MZ7-50
+>>	9	Forest- outside WUI	MZ7-50-g30
+>>	37	Private Industrial	MZ1-50-g30
+
+
+    HarvestImplementations
+>>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
+>>  ---------   ------------    ------------    ----------  --------
+
+1	PIF_CC_28	4.00%
+3	PIF_CC_30	4.00%
+5	PIF_CC_32	4.00%
+7	PIF_CC_34	4.00%
+9	PIF_CC_36	4.00%
+2	PIF_PCT_29	4.00%
+4	PIF_PCT_31	4.00%
+6	PIF_PCT_33	4.00%
+8	PIF_PCT_35	4.00%
+10	PIF_PCT_37	4.00%
+31	FED_SGH_10	8.00%
+33	FED_SGH_12	5.33%
+35	FED_SGH_14	2.67%
+37	FED_SGH_16	2.00%
+12	HAND_39	2.50%
+14	HAND_41	2.50%
+16	HAND_43	2.50%
+18	HAND_45	2.50%
+20	HAND_47	2.00%
+32	HAND_11	10.00%
+34	HAND_13	6.67%
+36	HAND_15	3.33%
+38	HAND_17	2.50%
+11	PNIF_SG_38	2.50%
+13	PNIF_SG_40	2.50%
+15	PNIF_SG_42	2.50%
+17	PNIF_SG_44	2.50%
+19	PNIF_SG_46	2.00%
+31	PNIF_SG_10	2.00%
+33	PNIF_SG_12	1.33%
+35	PNIF_SG_14	0.67%
+37	PNIF_SG_16	0.50%
+
+
+
+>>-----------------------------------------------------------------
+>> OUTPUTS
+
+PrescriptionMaps    harvest/prescripts-{timestep}.tif
+BiomassMaps	harvest/biomass-removed-{timestep}.tif
+EventLog            harvest/log.csv
+SummaryLog	    harvest/summary-log.csv

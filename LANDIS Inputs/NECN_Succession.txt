@@ -1,0 +1,296 @@
+LandisData "NECN Succession"	<<"NECN Succession"
+
+Timestep  1
+
+SeedingAlgorithm  WardSeedDispersal
+
+InitialCommunities      	IC_TM_CSV.txt
+InitialCommunitiesMap   	ic_mapcode.tif
+ClimateConfigFile		climate-generator.txt  
+
+SoilDepthMapName				SoilDepth.tif 
+SoilDrainMapName				SoilDrain.tif
+SoilBaseFlowMapName				BaseFFrac.tif  
+SoilStormFlowMapName				StormFFrac.tif 
+SoilFieldCapacityMapName			FieldCap.tif
+SoilWiltingPointMapName				WiltPoint.tif
+SoilPercentSandMapName				PercSand.tif
+SoilPercentClayMapName				PercClay.tif
+InitialSOM1CsurfMapName				SOM1Csurface.tif 
+InitialSOM1NsurfMapName				SOMNsurfacev2.tif 
+InitialSOM1CsoilMapName				SOM1Csoil.tif 
+InitialSOM1NsoilMapName				SOMNsoilv2.tif 
+InitialSOM2CMapName				SOM2C.tif 
+InitialSOM2NMapName				SOMN2.tif 
+InitialSOM3CMapName				SOM3C.tif
+InitialSOM3NMapName				SOMN3.tif
+InitialDeadWoodSurfaceMapName			SurfaceDead.tif 
+InitialDeadCoarseRootsMapName			deadcoarseroots.tif
+
+CalibrateMode 	no
+SmokeModelOutputs yes
+WaterDecayFunction Ratio <<Linear or Ratio
+
+ProbabilityEstablishAdjust 	0.6
+InitialMineralN			7.0
+InitialFineFuels		0.99
+AtmosphericNSlope		0.004
+AtmosphericNIntercept		0.04
+Latitude			39.5
+DenitrificationRate		0.0014 <<was 0.5
+DecayRateSurf			0.9
+DecayRateSOM1			0.9
+DecayRateSOM2			0.06 << Was 0.02 from Louise. changed 2/5
+DecayRateSOM3			0.0002
+
+MaximumLAI
+
+>> Shade	Max LAI
+>> Class	
+>> ----------	--------------------	
+	1	1 
+	2	2.5 
+	3	3.5 
+	4	6
+	5	8
+		
+
+LightEstablishmentTable	
+					
+>>	Spp Shade	Probability					
+>>	Class		by Actual Shade					
+>>	 ----------	--------------------					
+>>		0	1	2	3	4	5
+	1	1.0	0.5	0.02	0.0	0.0	0.0
+	2	0.6	1.0	0.5	0.02	0.0	0.0
+	3	0.01	0.6	1.0	0.5	0.02	0.0
+	4	0.0	0.01	0.6	1.0	0.5	0.02
+	5	0.0	0.0	0.01	0.5	1.0	1.0
+		
+SpeciesParameters << some data from Sarah, some arbitrary
+			
+>> Species 	Func				Min			Epi-											
+>>	   ional		GDD	GDD	Jan	Max	Leaf	cormic	Leaf	FRoot	Wood	CRoot	Leaf  	FRoot 	Wood  	CRoot 	Littr 	Annual	Max
+>> 	   Type	N-fix?	Min	Max	Temp	Drought	Long	re-sprout	Lign%	Lign%	Lign%	Lign%	CN    	CN    	CN    	CN    	CN	Biomass	Biomass
+AbieConc	4	N	400	3600	-10	0.93	8	N	0.17	0.2	0.25	0.25	30	30	333	222	100	70	100000
+AbieMagn	4	N	400	3400	-13	0.91	8	N	0.17	0.2	0.25	0.25	30	30	250	167	100	70	100000
+AcerMacr	2	N	550	3600	-3	0.5	1	N	0.18	0.22	0.28	0.32	24	30	400	80	62	80	20000
+AescCali	2	N	1100	4000	0	0.6	1	Y	0.18	0.22	0.28	0.32	24	30	400	80	62	50	10000
+AlnuRhom	2	Y	400	2950	-7	0.5	1	N	0.18	0.15	0.28	0.32	22	25	200	80	28	60	15000
+>>AlnuRubr	2	Y	400	2950	-7	0.5	1	N	0.18	0.15	0.28	0.32	22	25	200	80	28	50	15000
+ArbuMenz	2	N	400	3750	-5	0.75	3	Y	0.18	0.22	0.28	0.32	25	30	400	80	100	75	20000
+CaloDecu	1	N	1100	3600	-18	0.97	4	N	0.1	0.2	0.25	0.25	48	48	500	333	100	80	100000
+>>CercLedi	2	Y	200	2000	-12	0.9	3	Y	0.25	0.2	0.25	0.25	20	30	333	222	50	75	10000
+>>ChryChry	2	N	750	2950	-1	0.7	3	N	0.18	0.22	0.28	0.32	25	30	400	80	100	70	20000
+CornNutt	2	N	500	2500	-10	0.7	1	Y	0.18	0.15	0.28	0.32	22	25	200	80	28	75	10000
+JuniOcci	1	N	400	5500	-14	0.99	6	N	0.25	0.2	0.25	0.25	20	30	333	222	50	75	20000
+LithDens	2	N	900	3150	2	0.8	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	75	30000
+PinuAlbi	4	N	300	2400	-18	0.9	5.5	Y	0.27	0.2	0.25	0.25	80	80	333	222	100	60	15000
+PinuAtte	1	N	900	2500	1	0.8	2.5	N	0.28	0.2	0.25	0.25	48	48	250	167	100	60	15000
+PinuCont	4	N	500	2400	-18	0.87	3.5	N	0.25	0.2	0.25	0.25	48	48	500	333	100	60	15000
+>>PinuCoul	1	N	900	3800	2	0.6	2.5	N	0.28	0.2	0.25	0.25	48	48	250	167	100	70	15000
+>>PinuFlex	4	N	300	2400	-15	0.9	3.5	N	0.28	0.2	0.25	0.25	48	48	250	167	100	70	15000
+PinuJeff	1	N	900	2800	-5	0.95	6	N	0.28	0.2	0.25	0.25	48	48	250	167	100	70	100000
+PinuLamb	1	N	900	2800	-5	0.9	2.5	N	0.17	0.2	0.25	0.25	53	53	278	185	100	75	100000
+PinuMono	1	N	400	5500	-10	0.99	9	N	0.25	0.2	0.25	0.25	20	30	333	222	50	70	15000
+PinuMont	4	N	500	2200	-18	0.85	7	N	0.31	0.2	0.25	0.25	37	37	500	333	100	60	100000
+PinuPond	1	N	500	5500	-9	0.9	5	N	0.24	0.23	0.28	0.32	50	47	400	80	75	75	100000
+PinuSabi	1	N	900	4200	0	0.9	2.5	N	0.28	0.2	0.25	0.25	48	48	250	167	100	65	15000
+PinuWash	1	N	500	5500	-9	0.9	5	N	0.24	0.23	0.28	0.32	50	47	400	80	75	75	100000
+>>PopuBals	2	N	900	5000	-7	0.4	1	Y	0.18	0.15	0.28	0.32	22	25	200	80	28	70	15000
+PopuTrem	2	N	600	3200	-10	0.82	1	Y	0.18	0.2	0.25	0.25	62	62	333	222	100	70	10000
+PseuMenz	1	N	300	4950	-12	0.91	6	N	0.24	0.3	0.28	0.32	42	36	400	80	77	72	100000
+QuerChry	5	N	700	4250	0	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	70	20000
+QuerDoug	5	N	700	3950	0	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	75	20000
+QuerGarr	5	N	700	3950	0	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	75	20000
+QuerKell	5	N	850	4250	-1	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	70	20000
+>>QuerLoba	5	N	850	3950	-1	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	70	20000
+QuerWisl	5	N	850	4250	-1	0.95	1	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	70	20000
+>>SequGiga	1	N	500	3500	-2	0.75	3.5	N	0.17	0.2	0.25	0.25	53	53	278	185	100	200	100000
+TaxuBrev	1	N	400	2500	-4	0.8	4.5	N	0.31	0.2	0.25	0.25	37	37	500	333	100	70	15000
+TorrCali	5	N	900	4000	0	0.7	3	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	60	15000
+TsugMert	4	N	500	1400	-18	0.82	4.5	Y	0.24	0.2	0.25	0.25	80	80	333	222	100	65	90000
+UmbeCali	5	N	900	4000	0	0.7	3	Y	0.18	0.22	0.28	0.32	27	30	400	80	33	60	15000
+FX_R_SEED	3	Y	400	4000	-10	0.97	1.50	Y	0.25	0.2	0.25	0.25	20	28	333	222	50  	45	2900
+NOFX_R_SEED	3	N	400	4000	-10	0.97	1.50	Y	0.25	0.2	0.25	0.25	59	59	333	222	100 	45	2700
+NOFX_NOR_SEED	3	N	400	4000	-10	0.97	1.50	N	0.25	0.2	0.25	0.25	59	59	333	222	100 	45	2700
+									
+FunctionalGroupParameters << -  estimates from fhmem_century_succession.txt
+>> Woody decay rate from Louie was 1.0. 	
+>> Name		Index	PPDF1	PPDF2	PPDF3	PPDF4	FCFRAC	BTOLAI	KLAI	MAXLAI	PPRPTS2	PPRPTS3	Wood	Month	Age	Leaf 
+>>	 		T-Mean	T-Max	T-shape	T-shape	leaf						DecayR	Wood	Mort	Drop
+>>														Mort	Shape	Month CRFrac	FRFrac
+Conifers	1	20	40	1	3	0.2	0.022	3000	10	-0.01	0.05	0.2	0.002	15	10	0.1	0.1
+Hardwoods	2	18	38	1	4	0.3	0.022	2000	20	-0.01	0.06	0.2	0.002	15	10	0.1	0.1	
+Hardwoods_dry	5	18	40	1	4	0.3	0.022	2000	20	-0.01	0.04	0.2	0.002	15	10	0.1	0.1	
+Shrub		3	20	42	1	4	0.3	0.022	200	5	-0.01	0.05	0.2	0.002	15	10	0.1	0.1
+Firs		4	18	37	1	3	0.35	0.022	5000	15	-0.01	0.07	0.2	0.002	15	10	0.1	0.1
+
+FireReductionParameters
+>> Based on Stacy Drury's lit review/analysis. See 'Fuel consumption based on fire severity class.docx'
+>>	Severity	WoodLitter	Litter	  Cohort Wood 	Cohort Litter 		SOM
+>>	Fire		Reduct		Reduct	  Reduction	Reduction		Reduction
+	1		0.20		0.75 	  	0	0.1			0.5 <<0.1     
+	2		0.50		1.0		0.1	0.5			0.75 <<0.5
+	3		0.65		1.0		0.2	1.0			1.0
+
+HarvestReductionParameters
+>>	Name			WoodLitter	Litter	SOM		CohortWood	CohortLeaf
+>>				Reduct		Reduct	Reduction	Removal		Removal
+FED_SGH_10	0.8	0.14	0.1	0.85	0.25
+FED_SGH_10_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_12	0.8	0.14	0.1	0.85	0.25
+FED_SGH_12_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_14	0.8	0.14	0.1	0.85	0.25
+FED_SGH_14_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_16	0.8	0.14	0.1	0.85	0.25
+FED_SGH_16_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_2_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_4	0.8	0.14	0.1	0.85	0.25
+FED_SGH_4_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_6	0.8	0.14	0.1	0.85	0.25
+FED_SGH_6_2	0.8	0.14	0.1	0.85	0.25
+FED_SGH_8	0.8	0.14	0.1	0.85	0.25
+FED_SGH_8_2	0.8	0.14	0.1	0.85	0.25
+HAND_1	0.6	0.16	0.1	0.85	0.25
+HAND_1_2	0.6	0.16	0.1	0.85	0.25
+HAND_17	0.6	0.16	0.1	0.85	0.25
+HAND_19	0.6	0.16	0.1	0.85	0.25
+HAND_19_2	0.6	0.16	0.1	0.85	0.25
+HAND_21	0.6	0.16	0.1	0.85	0.25
+HAND_21_2	0.6	0.16	0.1	0.85	0.25
+HAND_23	0.6	0.16	0.1	0.85	0.25
+HAND_23_2	0.6	0.16	0.1	0.85	0.25
+HAND_25	0.6	0.16	0.1	0.85	0.25
+HAND_25_2	0.6	0.16	0.1	0.85	0.25
+HAND_27	0.6	0.16	0.1	0.85	0.25
+HAND_27_2	0.6	0.16	0.1	0.85	0.25
+HAND_3	0.6	0.16	0.1	0.85	0.25
+HAND_3_2	0.6	0.16	0.1	0.85	0.25
+HAND_48	0.6	0.16	0.1	0.85	0.25
+HAND_48_2	0.6	0.16	0.1	0.85	0.25
+HAND_49	0.6	0.16	0.1	0.85	0.25
+HAND_49_2	0.6	0.16	0.1	0.85	0.25
+HAND_5	0.6	0.16	0.1	0.85	0.25
+HAND_5_2	0.6	0.16	0.1	0.85	0.25
+HAND_50	0.6	0.16	0.1	0.85	0.25
+HAND_50_2	0.6	0.16	0.1	0.85	0.25
+HAND_51	0.6	0.16	0.1	0.85	0.25
+HAND_51_2	0.6	0.16	0.1	0.85	0.25
+HAND_52	0.6	0.16	0.1	0.85	0.25
+HAND_52_2	0.6	0.16	0.1	0.85	0.25
+HAND_53	0.6	0.16	0.1	0.85	0.25
+HAND_53_2	0.6	0.16	0.1	0.85	0.25
+HAND_54	0.6	0.16	0.1	0.85	0.25
+HAND_54_2	0.6	0.16	0.1	0.85	0.25
+HAND_55	0.6	0.16	0.1	0.85	0.25
+HAND_55_2	0.6	0.16	0.1	0.85	0.25
+HAND_56	0.6	0.16	0.1	0.85	0.25
+HAND_56_2	0.6	0.16	0.1	0.85	0.25
+HAND_57	0.6	0.16	0.1	0.85	0.25
+HAND_57_2	0.6	0.16	0.1	0.85	0.25
+HAND_7	0.6	0.16	0.1	0.85	0.25
+HAND_7_2	0.6	0.16	0.1	0.85	0.25
+HAND_9	0.6	0.16	0.1	0.85	0.25
+HAND_9_2	0.6	0.16	0.1	0.85	0.25
+PIF_CC_28	0.8	0.14	0.1	0.85	0.25
+PIF_CC_28_2	0.8	0.14	0.1	0.85	0.25
+PIF_CC_30	0.8	0.14	0.1	0.85	0.25
+PIF_CC_30_2	0.8	0.14	0.1	0.85	0.25
+PIF_CC_32	0.8	0.14	0.1	0.85	0.25
+PIF_CC_32_2	0.8	0.14	0.1	0.85	0.25
+PIF_CC_34	0.8	0.14	0.1	0.85	0.25
+PIF_CC_34_2	0.8	0.14	0.1	0.85	0.25
+PIF_CC_36	0.8	0.14	0.1	0.85	0.25
+PIF_CC_36_2	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_29	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_29_2	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_31	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_31_2	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_33	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_33_2	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_35	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_35_2	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_37	0.8	0.14	0.1	0.85	0.25
+PIF_PCT_37_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_11	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_11_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_13	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_13_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_15	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_15_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_17	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_17_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_18	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_18_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_2_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_20	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_20_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_22	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_22_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_24	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_24_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_26	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_26_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_39	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_39_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_4	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_4_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_41	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_41_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_43	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_43_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_45	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_45_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_47	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_47_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_6	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_6_2	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_8	0.8	0.14	0.1	0.85	0.25
+PNIF_PCT_8_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_10	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_10_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_12	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_12_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_14	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_14_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_16	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_16_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_18	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_18_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_20	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_20_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_22	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_22_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_24	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_24_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_26	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_26_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_38	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_38_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_40	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_40_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_42	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_42_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_44	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_44_2	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_46	0.8	0.14	0.1	0.85	0.25
+PNIF_SG_46_2	0.8	0.14	0.1	0.85	0.25
+HAND_39		0.6	0.16	0.1	0.85	0.25
+HAND_41		0.6	0.16	0.1	0.85	0.25
+HAND_43		0.6	0.16	0.1	0.85	0.25
+HAND_45		0.6	0.16	0.1	0.85	0.25
+HAND_47		0.6	0.16	0.1	0.85	0.25
+HAND_11		0.6	0.16	0.1	0.85	0.25
+HAND_13		0.6	0.16	0.1	0.85	0.25
+HAND_15		0.6	0.16	0.1	0.85	0.25
+HAND_18		0.6	0.16	0.1	0.85	0.25
+HAND_20		0.6	0.16	0.1	0.85	0.25
+HAND_22		0.6	0.16	0.1	0.85	0.25
+HAND_24		0.6	0.16	0.1	0.85	0.25
+HAND_2		0.6	0.16	0.1	0.85	0.25
+HAND_4		0.6	0.16	0.1	0.85	0.25
+HAND_6		0.6	0.16	0.1	0.85	0.25
+HAND_8		0.6	0.16	0.1	0.85	0.25
