@@ -1,0 +1,382 @@
+---
+title: "LANDIS validation documentation"
+author: "Charles Maxwell"
+date: "1/26/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(raster)
+library(rgdal)
+library(tidyverse)
+```
+
+## TCSI landscape inputs
+We followed the general steps to stand-up the LANDIS model for the TCSI landscape.
+### Biomass Estimates
+Based on Wilson et al. 2013.  Pulled their values for litter/duff/deadwood.  Compared SilviaTerra ABG biomass values against Wilson's values.
+### Soil
+This included the derivation of soil inputs (C,N, depth, composition, etc.) from the 2017 gridded SSURGO dataset for California.  
+### Fire
+#### Fire area
+I compiled fires that occurred in TCSI from MTBS and CalFire FRAP databases and calibrated SCRPPLE to match the fire distribution.
+
+ | time frame | stat | MTBS | LANDIS (4-reps)
+ | ----------|-------|------|------------
+ | 1990-2017 |	mean	| 3399 |	3857
+ | 1990-2017 |	stdev |	7990 |	6484
+
+
+#### Fire intensity
+Based on average percent area in each low, moderate, and high severity classes in the MTBS data.  The amount of low fire severity is understated in the model results as the area that went unburned in the fire perimeter is unreported.  The amount of moderate fire is overstated, adjusting the fire intensity threshold parameters either resulted in little to no high severity fire or too much high severity fire.  The average number of cells that burned at high intensity in the model was 12% in the LANDIS model and 16% in the MTBS records.
+#### Fire intensity to mortality
+Carried over from LTW initially and then updated to reflect the data for tree mortality by age from Cansler et al. 2020.  Additional species parameters that were not present in the database were based on most similar species.
+### Initial Communities
+Initial communities were provided by SilviaTerra.  
+
+## Insects
+### Mortality damage calibration--Stanislaus NF, years 2007-2016
+The embedded code generates the simulated insect mortality in the Stanislaus National Forest using a previous round of modeling for the greater Sierras as the input for initial communities.  The model was then run under contemporary climate inputs that were derived from the U-Idaho MetDATA dataset hosted by the the USGS GeoData Portal.
+
+```{r insect_mortality_map, echo= F}
+#wd <- "E:/TCSI/Stanislaus/"
+#setwd(wd)
+
+#lf <- list.files()
+
+#splist <- c("abieconc", "calodecu","pinulamb","pinupond", "TotalBiomass")
+#years <- 1:9
+#insect <- c("FirEngraver", "MountainPineBeetle", "WPineBeetle")
+
+#firen <- splist[1:2]
+#mpb <- splist[3:5]
+
+#i <- splist[2]
+#j <- years[1]
+#k <- insect[1]
+#l <- timesteps[1]
+#sp_data <- NULL
+#all_data <- NULL
+
+#bda <- "bda-20200115T182115Z-001/bda/"
+#biomass <- "biomass-20200115T175903Z-001/biomass/"
+
+##  for(j in years){
+#aw <- paste0(wd,bda)
+#setwd(aw)
+#print(aw)
+#lf <- list.files(aw)
+#head(lf)
+#pattern <- (paste0(".*.img"))
+#print(pattern)
+#awb <- grep(pattern, lf, value=TRUE)
+#print(awb)
+
+#sta <- stack()
+#sta2 <- stack()
+
+#sta <- stack(awb)
+
+#plot(sta)
+#len <- 1:71
+#for(i in len){
+#  ras <- sta[[i]]
+#  ras[ras[]<2]<-0
+#  ras[ras[]>1]<-1
+#  sta2 <- stack(ras, sta2)
+#}
+#plot(sta2)
+#rasin <- sum(sta2)
+#plot(rasin)
+#freq(rasin)
+#rasin[rasin[] >0 ] <- 1
+#plot(rasin)
+#writeRaster(rasin, "composite_ins_damage_mask_rensrd.tif")
+rasin <- raster("I:/TCSI/Stanislaus/composite_ins_damage_mask_rensrd.tif")
+stanmask <- raster("I:/TCSI/Stanislaus/stan_rasmask.tif")
+#plot(stanmask)
+
+rasin[rasin[] == 0] <- NA
+#rasin[rasin[] == 1] <- 10
+rasin@crs <- stanmask@crs
+rasin@extent <- stanmask@extent
+
+plot(stanmask, col = "grey")
+par(new=T)
+plot(rasin, col = "red")
+par(new=F)
+```
+
+This chunk calculates the mortality associated with the above incidence in plots that matched the criteria set by Fettig et al. 2019, which include at least 35% Ponderosa pine component and at least 10% mortality.  Under these conditions the results were comparable for their findings for ponderosa pine mortality, but lower mean losses white fir.  Note for the LANDIS range, it was calculated as mean % change +/- 1 sd.
+
+| Species | % mortality (min) | % mortality (max) | Source |
+|---------|-------------------|-------------------|------|
+| white fir | 0% | 25% | LANDIS | 
+| white fir | 15% | 50% | Fettig |
+| sugar pine | 0% | 39% | LANDIS |
+| sugar pine | 20% | 70% | Fettig |
+| ponderosa pine | 63% | 99% | LANDIS |
+| ponderosa pine | 45% | 85% | Fettig |
+
+To get at timing of outbreaks, the CWD and winter min temp thresholds were iteratively set to match as best as possible large historical outbreaks. This combination was set at CWD deficits greater than 630 mm/yr and wmt greater than 3 degrees C.  The net result was an overall accuracy (TT and FF) of 54%, but still underestimated total number of outbreaks.
+![match between ADS and landis](I:/TCSI/ADS_LANDIS_yearmatch.png)
+
+```{r insect_mortality_calc, eval=FALSE, include=FALSE}
+
+for(i in splist){
+  
+  r0 <- raster(paste0(wd,biomass,i,"-",0,".img"))
+  r0[r0[] == 0] <- NA
+  
+  r1 <- raster(paste0(wd,biomass,i,"-",10,".img"))
+  r1[r1[] == 0 ] <- NA
+  
+  p0 <- raster(paste0(wd,biomass,"pinupond-0.img"))
+  p10 <- raster(paste0(wd,biomass,"pinupond-10.img"))
+  t0 <- raster(paste0(wd,biomass,"TotalBiomass-0.img"))
+  
+  pt0 <- p0/t0
+  plot(pt0)
+  pt0[pt0[] >= 0.35] <- 1
+  pt0[pt0[] < 0.35] <- 0
+  p35 <- pt0
+  
+  pperc <-  (p10/p0)*100
+  plot(pperc)
+  freq(pperc)
+  hist(pperc)
+  pperc[pperc[] > 90] <- NA
+  pperc[pperc[] > 0] <- 1
+  
+  pfilter <- p35 + pperc
+  plot(pfilter)
+  pfilter[pfilter[] <2] <- NA
+  pfilter[pfilter[] ==2] <- 1
+  
+  plot(rasin)
+  plot(pfilter)
+  
+  pfilins <- rasin + pfilter
+  plot(pfilins)
+  
+  pfilins[pfilins[] < 2] <- 0
+  pfilins[pfilins[] > 0] <- 1
+  
+  aat0 <- mask(r0, pfilins)
+  plot(aat0)
+  freq(aat0)
+  
+  aat1 <- mask(r1, pfilins)
+  plot(aat1)
+  freq(aat1)
+  
+  ins_perc_dam <- (aat1 - aat0) / aat0
+  plot(ins_perc_dam)
+  freq(ins_perc_dam)
+  ins_perc_dam[is.nan(ins_perc_dam)] <- 0
+  ins_perc_dam[ins_perc_dam[] > 1] <- 0
+  
+  
+  
+  biomchange <- (aat1 - aat0)
+  plot(biomchange)      
+  freq(biomchange)
+  #    biom1 <- mask(r1, rperc)
+  #    plot(biom1)
+  #    hist(biom1)
+  #    freq(biom1)
+  
+  #    biommax <- cellStats(biom1, max)
+  #    biomean <- cellStats(biom1, mean)
+  #    biomedi <- cellStats(biom1, median)
+  #    biomsd <- cellStats(biom1, sd)
+  
+  biommax <- cellStats(r1, max)
+  biomean <- cellStats(r1, mean)
+  biomedi <- cellStats(r1, median)
+  biomsd <- cellStats(r1, sd)
+  
+  biomch <- cellStats(biomchange, mean)
+  
+  percmean <- cellStats(ins_perc_dam, mean)
+  percmedian <- cellStats(ins_perc_dam, median)
+  percsd <- cellStats(ins_perc_dam, sd)
+  
+  sp_data <- cbind(biomean, biomedi, biomsd, biomch, percmean, percmedian, percsd, i, j)
+  all_data <- rbind(all_data, sp_data)
+}
+```
+
+### From Stanislaus to TCSI
+There wasn't a direct overlap between Fettig's plots and the TCSI landscape; however, the USFS Aerial Detection Survey found extensive insect mortality during the time in question for the TCSI landscape.  We then assumed that the insect parameters from Stanislaus by transferred to the TCSI landscape, which is immediately to the north.
+
+### Insect assumptions
+We assume that outbreaks are triggered by drought stress by warm winter temperatures.  We set those parameters based on presence of outbreaks from the USFS ADS dataset.  Our goal was to recreate the mortality levels from Fettig, rather than the spatial extent from ADS given the difficulty in trying to get a meaningful calibration target from ADS (since area affected doesn't necessarily translate to mortality).  In addition, it wasn't possible to recreate the area affected for years 2014-2016 because those impacts were already incorporated into the SilviaTerra dataset.
+
+## Climate inputs
+### CWD
+Climatic water deficit is expected to increase under climate change.  There wasn't a direct comparison, the Basin Characterization Model (Flint and Flint 2010) has calculated historical CWD through 2010 and through 2100 for a handful of CMIP3 and 5 GCMs.  There didn't seem to be a good source for CWD estimates for the recent drought ~2014-2016.  LANDIS does calculate CWD internally though, which seemed in league with the numbers coming from the BCM model.
+Note that CNRM_85 and HadGEM_85 are hotter and drier than present day.  The source of the LANDIS data was the USGS geodata portal from the MACA downscaling method. 
+
+```{r CWD comp, warning = FALSE, echo = FALSE}
+cwd1 <- read.csv("E:/TCSI/BCM_vs_LANDIS_TCSI_COMP.csv")
+cwd <- ggplot(cwd1, aes(x = Year, y = Mean, color = GCM)) +
+  geom_line() +
+  labs(x = "Year", y = "CWD, mm yr-1", color = "GCM/Source")
+plot(cwd)
+```
+
+### Ecoregions
+LANDIS weather inputs require aggregation to climate ecoregions.  Initial ecoregions were built using a combination of elevation and aspect.  There was over 3000m of topographic relief across TCSI.  That gradient was broken down into 10 300m bands.  Combined with 4 generalized aspects (NE, SE, SW, NW) resulted in too many ecoregions (~37) which crashed when loaded into USGS geoData Portal <https://cida.usgs.gov/gdp/> . As a result only the elevation banded ecoregions were kept.  Regions are ordered in terms of lowest (1) to highest (10).
+
+```{r ecoregions, warning = FALSE, echo = FALSE}
+ecoregions <- raster("E:/TCSI/Inputs/Scenario1_180m/TCSI_ecoregions.tif")
+plot(ecoregions)
+```
+
+## Climate Projections
+Future temperatures will go up.  Precipitation amounts go up as well.
+
+```{r climate proj, message = FALSE, warning = FALSE, echo = FALSE}
+library(ggplot2)
+library(dplyr)
+library(anytime)
+library(lubridate)
+library(ggExtra)
+
+clim_colors <- c(CNRM_85 = '#C75205', CanESM_85 = '#990000', HadGEM_85 = '#039702', gridMET = "#344152", MIROC5 = "#00BFFF")
+## PRECIP ##
+### TCSI mean ###
+pr85 <- read.csv("E:/TCSI/Inputs/Weather/Climate/85_precip.csv")
+
+pr_85 <- pivot_longer(pr85,
+                     cols = 3:13,
+                     names_to = "variable")
+
+pr_85$Date <- anydate(pr_85$Date)
+pr_85$GCM <- as.factor(pr_85$GCM)
+
+pr_85 <- subset(pr_85, variable == "w_mean")
+
+pr_85 <- pr_85 %>%
+  mutate(year = year(Date))
+
+pr85_annual_ppt <- pr_85 %>%
+  group_by(GCM, year) %>%
+  summarise(sum_precip = sum(value))
+
+pr85_decade_ppt <- pr85_annual_ppt %>%
+  mutate(decade = floor(year/10)*10) %>% 
+  group_by(GCM, decade) %>% 
+  summarize(decade_tot = sum(sum_precip))
+
+pr85appt <- ggplot(pr85_annual_ppt, aes(x = year, y= sum_precip, color = GCM))+
+  geom_point(alpha=0)+
+  geom_line()+
+  geom_smooth(method = 'auto', alpha = 0.1) +
+  scale_color_manual(values = clim_colors)+
+  labs(title = 'Precipitation in mm/year', x = 'Year', y='Annual Sum of Precipitation', colour = 'Climate Projection')
+pr85appt
+
+plot(ggMarginal(pr85appt, data = pr85_annual_ppt, x = year, y = sum_precip, type = 'boxplot', margins = 'y', groupColour = T))
+
+
+### By ecoregion
+pr85 <- read.csv("E:/TCSI/Inputs/Weather/Climate/85_precip.csv")
+
+pr_85e <- pivot_longer(pr85,
+                      cols = 3:13,
+                      names_to = "variable")
+
+pr_85e$Date <- anydate(pr_85e$Date)
+pr_85e$GCM <- as.factor(pr_85e$GCM)
+
+pr_85 <- pr_85e %>%
+  mutate(year = year(Date))
+
+pr85_annual_ppt <- pr_85 %>%
+  group_by(GCM, year, variable) %>%
+  summarise(sum_precip = sum(value))
+
+pr85_decade_ppt <- pr85_annual_ppt %>%
+  mutate(decade = floor(year/10)*10) %>% 
+  group_by(GCM, decade) %>% 
+  summarize(decade_tot = sum(sum_precip))
+
+pr85appt <- ggplot(pr85_annual_ppt, aes(x = year, y= sum_precip, color = GCM))+
+  geom_point(alpha=0)+
+  geom_line()+
+#  facet_wrap(~GCM) +
+  geom_smooth(method = 'auto', alpha = 0.1) +
+  scale_color_manual(values = clim_colors)+
+  labs(title = 'Precipitation in mm/year', x = 'Year', y='Annual Sum of Precipitation', colour = 'Climate Projection')
+#plot(pr85appt)
+
+ggMarginal(pr85appt, data = pr85_annual_ppt, x = year, y = sum_precip, type = 'boxplot', margins = 'y', groupColour = T)
+
+
+## TMAX ##
+tm85 <- read.csv("E:/TCSI/Inputs/Weather/Climate/85_tmax.csv")
+
+tm_85 <- pivot_longer(tm85,
+                      cols = 3:13,
+                      names_to = "variable")
+
+tm_85$Date <- anydate(tm_85$Date)
+tm_85$GCM <- as.factor(tm_85$GCM)
+tm_85 <- subset(tm_85, variable == "w_mean")
+
+tm_85 <- tm_85 %>%
+  mutate(year = year(Date))
+
+tm85t <- ggplot(tm_85, aes(x = Date, y= value, color = GCM))+
+  geom_point(alpha=0)+
+  geom_line()+
+  geom_smooth(method = 'auto', alpha = 0.1) +
+  scale_color_manual(values = clim_colors)+
+  labs(title = 'Daily max temperature', x = 'Date', y='Degrees in C', colour = 'Climate Projection')
+tm85t
+
+
+tm85_annual_t <- tm_85 %>%
+  group_by(GCM, year) %>%
+  summarise(mean_tmax = mean(value))
+
+tm85appt <- ggplot(tm85_annual_t, aes(x = year, y= mean_tmax, color = GCM))+
+  geom_point(alpha=0)+
+  geom_line()+
+  geom_smooth(method = 'auto', alpha = 0.1) +
+  scale_color_manual(values = clim_colors)+
+  labs(title = 'Daily max temperature', x = 'Date', y='Degrees in C', colour = 'Climate Projection')
+tm85appt
+
+plot(ggMarginal(tm85appt, data = tm85_annual_t, x = year, y = mean_tmax, type = 'boxplot', margins = 'y', groupColour = T))
+```
+
+### FWI
+Those climate projections resulted in unusual fire weather indexes. The projected fire weather index under these different climate projections do not reflect the severity or the variability in FWI that was in the contemporary climate data.  The closest to matching the contemporary FWI values are the MIROC5 projection, which seems to have the closest amount of average annual precipitation as contemporary.  
+
+```{r fwi proj, warning = FALSE, echo = FALSE}
+library(ggplot2)
+library(dplyr)
+
+ccfi <- read.csv("F:/TCSI/Round2_outputs/wFWI_byclim.csv")
+ccfi$Date <- as.Date(ccfi$Date)
+ccfi$Climate <- as.factor(ccfi$Climate)
+ccfi$Climate <- with(ccfi, reorder(Climate, Order))
+ccfi$year <- as.numeric(format(ccfi$Date,'%Y'))
+
+#fire_season <- c("July", "August", "September", "October")
+#ccfi <- ccfi %>%
+#  mutate(s_month = months.Date(Date)) %>%
+#  filter(s_month %in% fire_season)
+
+wfwi <- ggplot(ccfi, aes(x = Date, y = wFWI, color = Climate)) +
+  geom_line() +
+  geom_smooth() +
+  theme_bw() +
+  labs(y = "Fire Weather Index", color = "Climate Source/Projection")
+
+plot(wfwi)
+```
