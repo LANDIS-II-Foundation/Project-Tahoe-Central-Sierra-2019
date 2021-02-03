@@ -21,8 +21,10 @@ Extensions included:
 - Extension Biomass BDA: Insect mortality (https://github.com/LANDIS-II-Foundation/Extension-Biomass-BDA)
 - Extension NECN Succession: Succession and Carbon dynamics (https://github.com/LANDIS-II-Foundation/Extension-NECN-Succession)
 - Extension SCRPPLE: Fire mortality (https://github.com/LANDIS-II-Foundation/Extension-SCRPPLE)
-
-- Needs updating.  Which output extensions?
+- Extension Biomass Harvest: Harvest management (https://github.com/LANDIS-II-Foundation/Extension-Biomass-Harvest)
+- Extension Output Biomass: Species biomass (https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass)
+- Extension Output Biomass Community: Produces list of all cohorts (https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community)
+- Extension Output Age Reclass: Produces map outpus by species-age classes (https://github.com/LANDIS-II-Foundation/Extension-Output-Age-Reclassification)
 
 # Project Documents
 
@@ -30,14 +32,8 @@ Extensions included:
 
 # Scripts
 
-Contains the scripts used to analyze LANDIS-II model outputs.
-
-- Any scripts used for inputs?
+Contains R scripts that were used to derive inputs and to analyze LANDIS-II model outputs.
 
 # Stanislaus_insect_testing
 
-We parameterized the southern Sierra Nevada, using inputs from the 2007 fisher project (https://github.com/LANDIS-II-Foundation/Project-Sierra-Nevada-2007), to calibrate and test our insect extension against the data provided by Chris Fettig in:
-
-REFERENCE HERE.
-
-
+We parameterized the southern Sierra Nevada, using inputs from the 2007 fisher project (https://github.com/LANDIS-II-Foundation/Project-Sierra-Nevada-2007), to calibrate and test our insect extension against the data provided by Chris Fettig in: (https://doi.org/10.1016/j.foreco.2018.09.006).
