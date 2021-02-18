@@ -26,10 +26,6 @@ Extensions included:
 - Extension Output Biomass Community: Produces list of all cohorts (https://github.com/LANDIS-II-Foundation/Extension-Output-Biomass-Community)
 - Extension Output Age Reclass: Produces map outpus by species-age classes (https://github.com/LANDIS-II-Foundation/Extension-Output-Age-Reclassification)
 
-# Project Documents
-
-- Are there other primary documents to add?  Could we add a PDF of the report to the foundation?
-
 # Scripts
 
 Contains R scripts that were used to derive inputs and to analyze LANDIS-II model outputs.
