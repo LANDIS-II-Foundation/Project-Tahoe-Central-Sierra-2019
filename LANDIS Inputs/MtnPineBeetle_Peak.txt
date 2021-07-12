@@ -67,7 +67,7 @@ BDASpeciesParameters <<need to find ages. CFS Synthesis, 10cm cutoff for unaffec
 >>Species  MinorHost  2ndHost  MajorHost  Class3   Class2   Class1	CFS
 >>Name     Age        Age      Age        Age      Age      Age		Conifer
 >> -----------------------------------------------------------------------------
-PinuAlbi	20	0.16      60 0.3	80	0.4     20 0.01	60	0.05    80	0.09 	yes
-PinuLamb	20	0.16      60 0.3	80	0.4     20 0.01	60	0.05   80	0.09	yes
-PinuCont	20	0.16      60 0.3	80	0.4     20 0.01	60	0.05   80	0.09	yes
-PinuMont    	20	0.16      60 0.3	80	0.4     20 0.01	60	0.05   80	0.09 	yes
+PinuAlbi	20	0.16      60 0.15	80	0.2     20 0.01	60	0.05    80	0.09 	yes
+PinuLamb	20	0.16      60 0.15	80	0.2     20 0.01	60	0.05   80	0.09	yes
+PinuCont	20	0.16      60 0.15	80	0.4     20 0.01	60	0.05   80	0.09	yes
+PinuMont    	20	0.16      60 0.15	80	0.2     20 0.01	60	0.05   80	0.09 	yes

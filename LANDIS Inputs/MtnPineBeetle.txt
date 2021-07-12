@@ -11,8 +11,8 @@ SRDMode			mean
 >>-------- Regional Outbreak Inputs -------------
 OutbreakPattern Climate << CyclicNormal or CyclicUniform, or ClimateLibrary 
 VariableName "CWD+WinterT"
-Threshold1 610
-Threshold2 3
+Threshold1 620
+Threshold2 2
 OutbreakLag 0
 TimeSinceLastClimate 10
 
@@ -34,15 +34,15 @@ OutbreakEpicenterCoeff	0.01    << increasing this param decreases # of new epice
 OutbreakEpicenterThresh 0.0
 SeedEpicenter		yes	<<yes or no
 SeedEpicenterCoeff	0.01
-DispersalTemplate	MaxRadius	<<MaxRadius, 4N,
+DispersalTemplate	12N	<<MaxRadius, 4N,
 				<<8N, 12N, or 24N
 
 >>-------- Neighborhood Resource Inputs -----------
 NeighborFlag	yes	<<yes or no  
 NeighborSpeedUp	2x	<<none, 2x, 3x, *should apply neighborhood function, as mpb dont use aggregation pheremone and are more generalist. CFS synthesis 2006
 			<<or 4x
-NeighborRadius	2000	<<meters  Safranyik 2006
-NeighborShape	uniform	<<uniform, linear, 
+NeighborRadius	1000	<<meters  Safranyik 2006
+NeighborShape	gaussian	<<uniform, linear, 
 			<<or gaussian
 NeighborWeight	20
 
@@ -67,7 +67,7 @@ BDASpeciesParameters <<need to find ages. CFS Synthesis, 10cm cutoff for unaffec
 >>Species  MinorHost  2ndHost  MajorHost  Class3   Class2   Class1	CFS
 >>Name     Age        Age      Age        Age      Age      Age		Conifer
 >> -----------------------------------------------------------------------------
-PinuAlbi	20	0.17      60 0.23	80	0.3     20 0.02	60	0.02    80	.04 	yes
-PinuLamb	20	0.17      60 0.23	80	0.3     20 0.02	60	0.02    80	.04 	yes
-PinuCont	20	0.17      60 0.23	80	0.3     20 0.02	60	0.02    80	.04 	yes
-PinuMont    	20	0.17      60 0.23	80	0.3     20 0.02	60	0.02    80	.04 	yes
+PinuAlbi	20	0.1      80 0.02	160	0.12     20 0.001	80	0.14    160	0.16 	yes
+PinuLamb	20	0.1      80 0.02	160	0.12     20 0.001	80	0.14    160	0.16 	yes
+PinuCont	20	0.1      80 0.13	160	0.4     20 0.001	80	0.14    160	0.26 	yes
+PinuMont    	20	0.1      80 0.02	160	0.12     20 0.001	80	0.14    160	0.16 	yes

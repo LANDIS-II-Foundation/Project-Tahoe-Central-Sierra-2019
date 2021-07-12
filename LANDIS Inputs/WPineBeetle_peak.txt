@@ -1,6 +1,6 @@
 LandisData "BDA Agent"
 
-BDAAgentName		WPineBeetle
+BDAAgentName		WPineBeetle_peak
 BDPCalibrator		1
 SRDMode			mean
 
@@ -11,8 +11,8 @@ SRDMode			mean
 >>-------- Regional Outbreak Inputs -------------
 OutbreakPattern Climate << CyclicNormal or CyclicUniform, or ClimateLibrary 
 VariableName "CWD+WinterT"
-Threshold1 630
-Threshold2 4
+Threshold1 650
+Threshold2 5
 OutbreakLag 0
 TimeSinceLastClimate 10
 
@@ -26,23 +26,23 @@ MaxROS             3
 
 
 >>-------- Dispersal Inputs ----------------------
-Dispersal		no <<yes or no
+Dispersal		yes <<yes or no
 DispersalRate		400	<<meters/year copied from MPB
 EpidemicThresh		0.01   <<was 0.05
-InitialEpicenterNum	60000      <<
+InitialEpicenterNum	6000      <<
 OutbreakEpicenterCoeff	0.01    << increasing this param decreases # of new epicenters
 OutbreakEpicenterThresh 0.0
 SeedEpicenter		yes	<<yes or no
 SeedEpicenterCoeff	0.01
-DispersalTemplate	MaxRadius	<<MaxRadius, 4N,
+DispersalTemplate	12N	<<MaxRadius, 4N,
 				<<8N, 12N, or 24N
 
 >>-------- Neighborhood Resource Inputs -----------
 NeighborFlag	yes	<<yes or no  
 NeighborSpeedUp	2x	<<none, 2x, 3x, wpb use aggregation pheremone 
 			<<or 4x
-NeighborRadius	10000	<<meters increased this over MPB
-NeighborShape	uniform	<<uniform, linear, 
+NeighborRadius	400	<<meters increased this over MPB
+NeighborShape	gaussian	<<uniform, linear, 
 			<<or gaussian
 NeighborWeight	20
 
@@ -66,5 +66,5 @@ BDASpeciesParameters <<need to find better ages.  Fettig 2009?
 >>Species  MinorHost  2ndHost  MajorHost  Class3   Class2   Class1	CFS
 >>Name     Age        Age      Age        Age      Age      Age		Conifer
 >> -----------------------------------------------------------------------------
-PinuPond	20	0.15      60 0.25	150	0.38     40 0.1	60	0.2    75	0.3 	yes
-PinuWash	20	0.15      60 0.25	150	0.38     40 0.1	60	0.2    75	0.3 	yes
+PinuPond	20	0.1     60 0.25	150	0.45     20 0.15	60	0.35    150	0.55 	yes
+PinuWash	20	0.1     60 0.25	150	0.45     20 0.15	60	0.35    150	0.55 	yes

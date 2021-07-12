@@ -11,8 +11,8 @@ SRDMode			mean
 >>-------- Regional Outbreak Inputs -------------
 OutbreakPattern Climate << CyclicNormal or CyclicUniform, or ClimateLibrary 
 VariableName "CWD+WinterT"
-Threshold1 625  <<cwd
-Threshold2 3   <<mintemp
+Threshold1 620  <<cwd
+Threshold2 1.5   <<mintemp
 OutbreakLag 0
 TimeSinceLastClimate 10  <<unused
 
@@ -24,23 +24,23 @@ MinROS             0
 MaxROS             3
 
 >>-------- Dispersal Inputs ----------------------
-Dispersal		no	<<yes or no
+Dispersal		no <<yes or no
 DispersalRate		600	<<meters/year This came from Joel Egen conversation
 EpidemicThresh		0.01  
-InitialEpicenterNum	36000  <<This value came from ADS maps year ==1993
-OutbreakEpicenterCoeff	0.001 << # of epicenters w/in outbreak zone.increasing this param decreases # of new epicenters
+InitialEpicenterNum	12000  <<This value came from ADS maps year ==1993
+OutbreakEpicenterCoeff	0.009 << # of epicenters w/in outbreak zone.increasing this param decreases # of new epicenters
 OutbreakEpicenterThresh 0.0
 SeedEpicenter		yes	<<yes or no
 SeedEpicenterCoeff	0.01  <<# of epicenters outside outbreak zone. #of epicenters will decrease with increasing value
-DispersalTemplate	MaxRadius	<<MaxRadius, 4N,
+DispersalTemplate	12N	<<MaxRadius, 4N,
 				<<8N, 12N, or 24N
 
 >>-------- Neighborhood Resource Inputs -----------
 NeighborFlag	no	<<yes or no  <<need to test this on the landscape
 NeighborSpeedUp	none	<<none, 2x, 3x, 
 			<<or 4x
-NeighborRadius	10000	<<meters
-NeighborShape	uniform	<<uniform, linear, 
+NeighborRadius	1500	<<meters
+NeighborShape	gaussian	<<uniform, linear, 
 			<<or gaussian
 NeighborWeight	20
 
@@ -64,6 +64,6 @@ BDASpeciesParameters << From Egen JPB Effects report (dbh affected), and silvics
 >>Species 	MinorHost 	2ndHost 		MajorHost	| Class3 		Class2 			Class1 		 | Dead
 >>Name 		Age SRDProb  Age SRDProb 	Age SRDProb | Age MortProb Age 	MortProb 	Age MortProb | Fuel?
 >> -----------------------------------------------------------------------------
-PinuJeff	0	0.05      20 	0.15	   80 	0.2       0	0.02   40	0.04    	120	0.06 yes  << slightly updated accoridng to Egan et al 2016
+PinuJeff	0	0.1      40 	0.14	120 	0.2       0	0.01   40	0.1    	120	0.08 yes  << slightly updated accoridng to Egan et al 2016
 
 

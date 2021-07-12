@@ -1,6 +1,6 @@
 LandisData "BDA Agent"
 
-BDAAgentName		FirEngraver
+BDAAgentName		FirEngraver_Peak
 BDPCalibrator		1
 SRDMode			mean
 
@@ -12,7 +12,7 @@ SRDMode			mean
 OutbreakPattern Climate << CyclicNormal or CyclicUniform, or ClimateLibrary 
 VariableName "CWD+WinterT"
 Threshold1 630
-Threshold2 4
+Threshold2 2
 OutbreakLag 0
 TimeSinceLastClimate 10
 
@@ -28,7 +28,7 @@ MaxROS             3
 Dispersal		no <<yes or no   
 DispersalRate		1000	<<meters/year  Jactel 1991. This is for lps sexdentatus
 EpidemicThresh		0.01
-InitialEpicenterNum	60000
+InitialEpicenterNum	24000
 OutbreakEpicenterCoeff	0.001
 OutbreakEpicenterThresh 0.0
 SeedEpicenter		yes	<<yes or no
@@ -40,8 +40,8 @@ DispersalTemplate	MaxRadius	<<MaxRadius, 4N,
 NeighborFlag	no	<<yes or no  No aggregation pheremone. Follows host volatiles, USFS Fir Engraver Facts
 NeighborSpeedUp	none	<<none, 2x, 3x, 
 			<<or 4x
-NeighborRadius	10000	<<meters   I'm basing this on max dispersal distance basically. Jactel 1991 lps sexdentatus
-NeighborShape	uniform	<<uniform, linear, 
+NeighborRadius	2000	<<meters   I'm basing this on max dispersal distance basically. Jactel 1991 lps sexdentatus
+NeighborShape	gaussian	<<uniform, linear, 
 			<<or gaussian
 NeighborWeight	100
 
@@ -65,7 +65,6 @@ BDASpeciesParameters << trees below 10cm are immune Ferrel 1994
 >>Species  MinorHost  2ndHost  MajorHost  Class3   Class2   Class1	CFS
 >>Name     Age        Age      Age        Age      Age      Age		Conifer
 >> -----------------------------------------------------------------------------
-AbieConc	0	0.0      10     0.17	60	 0.25          0		0.0 10	0.005    60	0.007	yes
-AbieMagn	0	0.0      10	0.12  	60	 0.17          0	0.0 10	0.005    60	0.007	yes
-
+AbieConc	0	0.0     20     0.1	60	 0.2          0	0.0 20	0.12    120	0.24	yes
+AbieMagn	0	0.0      20	0.1  	60	 0.18         0	0.0 20	0.12    120	0.24	yes
 

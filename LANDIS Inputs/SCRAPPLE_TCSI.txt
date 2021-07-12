@@ -2,66 +2,71 @@ LandisData  "SCRAPPLE"
 
 Timestep                            1
 
-AccidentalIgnitionsMap     	accidental2.tif <<NEED
-LightningIgnitionsMap  		lightning2.tif <<NEED
-RxIgnitionsMap  		rx_equal2.tif<<NEED
+Species_CSV_File	SCRPPLE_spp_sierra.csv
 
-AccidentalSuppressionMap	full_suppression2.tif <<NEED
-LightningSuppressionMap		full_suppression2.tif <<NEED
-RxSuppressionMap		full_suppression2.tif <<NEED
+AccidentalIgnitionsMap     	accidental1.tif <<NEED
+LightningIgnitionsMap  		lightning1.tif <<NEED
+RxIgnitionsMap  		rx_equal1.tif<<NEED
+
+AccidentalSuppressionMap	full_suppression.tif <<NEED
+LightningSuppressionMap		full_suppression.tif <<NEED
+RxSuppressionMap		full_suppression.tif <<NEED
 
 GroundSlopeMap Slope2.tif		
-UphillSlopeAzimuthMap  upslope2.tif	
+UphillSlopeAzimuthMap  upslope.tif	
+ClayMap PercClay.tif
 
 >>Updated on 2/20 w new fits params
-LightningIgnitionsB0   -4.7
-LightningIgnitionsB1   0.03
-AccidentalIgnitionsB0  -4.1
-AccidentalIgnitionsB1  0.03
+LightningIgnitionsB0   -4.0
+LightningIgnitionsB1   0.035
+AccidentalIgnitionsB0  -4.0
+AccidentalIgnitionsB1  0.035
 
 MaximumFineFuels 5400 <<Derived from Fuel Loadings with Jonathan Long
 
 >> Prescribed Fire Parameters
-MaximumRxWindSpeed 6.6
-MaximumRxFireWeatherIndex 55.0
-MinimumRxFireWeatherIndex 10.0
+MaximumRxWindSpeed 11
+MaximumRxFireWeatherIndex 42.0
+MinimumRxFireWeatherIndex 6.0
 MaximumRxTemperature 32.0	<< Optional
->> MinimumRxRelativeHumidity 22.0	<< Optional
+MinimumRxRelativeHumidity 22.0	<< Optional
 MaximumRxFireIntensity 1
 NumberRxAnnualFires 0
 NumberRxDailyFires 1
-FirstDayRxFires 30
-LastDayRxFires 330
-TargetRxSize 10
->> RxZonesMap fire-zones.gis  << Optional
+FirstDayRxFires 10
+LastDayRxFires 350
+TargetRxSize 40
 
->>These are all based on a simple glm
-MaximumSpreadAreaB0	-73 
-MaximumSpreadAreaB1	8.0 <<-3 <<FWI
-MaximumSpreadAreaB2	6.2 <<-2.5  <<effective wind speed
+MaximumSpreadAreaB0	-71 
+MaximumSpreadAreaB1	17.5 <<-3 <<FWI
+MaximumSpreadAreaB2	10.6 <<-2.5  <<effective wind speed
 
->>Fitted params on 12/27 using optim() BFGS method : -1.79, 0.06, -.915, 0.0126
->>Fitted params on 12/28 using optim() SANN method: 0.33980600,  0.01726217, -0.31600116,  0.03447919
-SpreadProbabilityB0 -34 <<more negative means lower spread
-SpreadProbabilityB1 0.79  <<FWI
-SpreadProbabilityB2  0.51 << relativized fine fuels. Was .915
-SpreadProbabilityB3 0.099 << effective wind speed. 
+SpreadProbabilityB0 -35 <<more negative means lower spread
+SpreadProbabilityB1 0.62  <<FWI
+SpreadProbabilityB2  0.52 << relativized fine fuels. Was .915
+SpreadProbabilityB3 0.31 << effective wind speed. 
 
-IntensityFactor:FineFuelPercent  0.33 <<Was 0.1
-IntensityFactor:LadderFuelMaxAge 20
-IntensityFactor:LadderFuelBiomass 2200 <<was 1200
+SiteMortalityB0	-0.0004047	<< Intercept
+SiteMortalityB1	0.00026380	<< Clay
+SiteMortalityB2	-0.00000483	<< Previous PET
+SiteMortalityB3	0.00003033	<<Wind
+SiteMortalityB4	0.00000857	<<CWD
+SiteMortalityB5	0.00358100	<<Fine
+SiteMortalityB6	0.00000064	<<Ladder
+
+CohortMortalityB0 -0.73 << Intercept
+CohortMortalityB1 -0.9 << The parameter fit for the relationship between bark thickness and cohort mortality.
+CohortMortalityB2  0.008 << The parameter fit for the relationship between site mortality and cohort mortality. 
+
+LadderFuelMaxAge 28
 
 LadderFuelSpeciesList 
-PinuJeff AbieConc CaloDecu PinuPond PseuMenz
+AbieConc CaloDecu PinuCont PinuJeff PinuLamb PinuPond PinuMono PinuSabi PinuWash PseuMenz FX_R_SEED NOFX_R_SEED NOFX_NOR_SEED
 
-SuppressionMaxWindSpeed 11
-SuppressionTable  << Adjusted in consultation with JLong, BGarrett and their fire folks
->>Type		FWI1	FWI2	Lo	Md	High-Effectiveness
-Accidental	40 	75	0	8	16	<< Used to be 5 65 95. FWI cutoffs used to be 30 and 50
-Lightning	40 	75	0	5	10
-Rx 		40 	75  	0	5	10
+SuppressionMaxWindSpeed 12
+Suppression_CSV_File Example_Suppression_Input.csv
 
-DeadWoodTable <<
+DeadWoodTable
 PinuJeff	22
 CaloDecu	33
 PinuCont	38
@@ -71,277 +76,6 @@ AbieConc	29
 PinuAlbi	34
 PinuMont	34
 TsugMert	30
->>PinuAtte	29
->>PinuCoul	24
->>PinuFlex	32
->>PinuMono	22
 PinuPond	24
-PinuSabi	22
 PinuWash	24
 PseuMenz	27
-
->> Mortality data is compiled from Brian Garrett and Brandon Collins 12/7/2017
->> There could also be a high age cohort with slightly elevated mortality levels per Brian
-
-FireIntensityClass_1_DamageTable <<NEED to UPDATE with additional species
->> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
-AbieConc	0	60	0.65	
-AbieConc	60	90	0.4	
-AbieConc	80	450	0.1	<<guess
-AbieMagn	0	70	0.6	
-AbieMagn	70	110	0.33	
-AbieMagn	110	500	0.3	
-CaloDecu	0	66	0.73	
-CaloDecu	66	116	0.16	
-CaloDecu	116	500	0.14	
-PinuAlbi	0	140	0.87	
-PinuAlbi	140	270	0.4	
-PinuAlbi	270	900	0.1	<<guess
-PinuCont	0	80	0.75	
-PinuCont	80	160	0.56	
-PinuCont	160	250	0.25	<<guess
-PinuJeff	0	60	0.53	
-PinuJeff	60	120	0.2	
-PinuJeff	120	500	0.2	
-PinuLamb	0	60	0.33	<<pipo
-PinuLamb	60	105	0.09	<<pipo
-PinuLamb	105	500	0.08	<<pipo
-PinuMont	0	90	0.55	
-PinuMont	90	180	0.64	
-PinuMont	180	550	0.61	
-PopuTrem	0	65	0.8	
-PopuTrem	65	140	0.5	
-PopuTrem	140	175	0.1	<<guess
-TsugMert	0	110	0.6	<<guess
-TsugMert	110	215	0.2	<<guess
-TsugMert	215	800	0.1	<<guess
-AcerMacr	0	45	0.8	<<guess
-AcerMacr	45	80	0.7	<<guess
-AcerMacr	80	350	0.6	<<guess
-AlnuRhom	0	47	0.8	<<guess
-AlnuRhom	47	73	0.7	<<guess
-AlnuRhom	73	250	0.6	<<guess
-ArbuMenz	0	50	0.65	<<guess
-ArbuMenz	50	95	0.3	<<guess
-ArbuMenz	95	350	0.1	<<guess
-JuniOcci	0	95	0.8	<<guess
-JuniOcci	95	181	0.7	<<guess
-JuniOcci	181	200	0.6	<<guess
-LithDens	0	50	0.65	<<guess
-LithDens	50	80	0.3	<<guess
-LithDens	80	250	0.2	<<guess
-PinuPond	0	48	0.33	
-PinuPond	48	95	0.09	
-PinuPond	95	600	0.08	
-PinuSabi	0	42	0.6	<<guess
-PinuSabi	42	70	0.4	<<guess
-PinuSabi	70	200	0.2	<<guess
-PinuWash	0	48	0.33	
-PinuWash	48	95	0.09	
-PinuWash	95	600	0.08	
-PseuMenz	0	58	0.48	
-PseuMenz	58	100	0.22	
-PseuMenz	100	650	0.20	
-QuerChry	0	75	0.5625	
-QuerChry	75	125	0.333333333	
-QuerChry	125	250	0.2	<<guess
-QuerKell	0	70	0.48	
-QuerKell	70	125	0.27	
-QuerKell	125	300	0.15	
-QuerWisl	0	60	0.8	<<guess
-QuerWisl	60	90	0.7	<<guess
-QuerWisl	90	350	0.6	<<guess
-TaxuBrev	0	30	0.8	<<guess
-TaxuBrev	30	70	0.7	<<guess
-TaxuBrev	70	400	0.6	<<guess
-TorrCali	0	110	0.8	<<guess
-TorrCali	110	215	0.7	<<guess
-TorrCali	215	300	0.6	<<guess
-UmbeCali	0	38	0.8	<<guess
-UmbeCali	38	52	0.7	<<guess
-UmbeCali	52	400	0.6	<<guess
-FX_R_SEED	0	10	0.6	<<guess
-FX_R_SEED	10	40	0.7	<<guess
-FX_R_SEED	40	90	0.8	<<guess
-NOFX_R_SEED	0	10	0.6	<<guess
-NOFX_R_SEED	10	40	0.7	<<guess
-NOFX_R_SEED	40	90	0.8	<<guess
-NOFX_NOR_SEED	0	10	0.6	<<guess
-NOFX_NOR_SEED	10	40	0.7	<<guess
-NOFX_NOR_SEED	40	90	0.8	<<guess
-
-
-FireIntensityClass_2_DamageTable
->> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
-AbieConc	0	60	0.971830986
-AbieConc	60	90	0.770072993
-AbieConc	80	450	0.47080292
-AbieMagn	0	70	0.971830986
-AbieMagn	70	110	0.770072993
-AbieMagn	110	500	0.47080292
-CaloDecu	0	66	0.896551724
-CaloDecu	66	116	0.615384615
-CaloDecu	116	500	0.222222222
-PinuAlbi	0	140	0.993710692
-PinuAlbi	140	270	0.882352941
-PinuAlbi	270	900	0.4
-PinuCont	0	80	0.999422966
-PinuCont	80	160	0.980169972
-PinuCont	160	250	0.6
-PinuJeff	0	60	1
-PinuJeff	60	120	0.731481481
-PinuJeff	120	500	0.489361702
-PinuLamb	0	60	0.870763296
-PinuLamb	60	105	0.489850746
-PinuLamb	105	500	0.316091954
-PinuMont	0	90	1
-PinuMont	90	180	0.95
-PinuMont	180	550	0.666666667
-PopuTrem	0	65	0.9
-PopuTrem	65	140	0.7
-PopuTrem	140	175	0.6
-TsugMert	0	110	0.8
-TsugMert	110	215	0.5
-TsugMert	215	800	0.3
-AcerMacr	0	45	1
-AcerMacr	45	80	1
-AcerMacr	80	350	1
-AlnuRhom	0	47	1
-AlnuRhom	47	73	1
-AlnuRhom	73	250	1
-ArbuMenz	0	50	0.8
-ArbuMenz	50	95	0.5
-ArbuMenz	95	350	0.4
-JuniOcci	0	95	1
-JuniOcci	95	181	1
-JuniOcci	181	200	1
-LithDens	0	50	0.8
-LithDens	50	80	0.5
-LithDens	80	250	0.4
-PinuPond	0	48	0.870763296
-PinuPond	48	95	0.489850746
-PinuPond	95	600	0.316091954
-PinuSabi	0	42	0.8
-PinuSabi	42	70	0.6
-PinuSabi	70	200	0.4
-PinuWash	0	48	0.870763296
-PinuWash	48	95	0.489850746
-PinuWash	95	600	0.316091954
-PseuMenz	0	58	0.966723068
-PseuMenz	58	100	0.713615023
-PseuMenz	100	650	0.28957529
-QuerChry	0	75	1
-QuerChry	75	125	0.8
-QuerChry	125	250	0.4
-QuerKell	0	70	1
-QuerKell	70	125	0.714285714
-QuerKell	125	300	0.5
-QuerWisl	0	60	1
-QuerWisl	60	90	1
-QuerWisl	90	350	1
-TaxuBrev	0	30	1
-TaxuBrev	30	70	1
-TaxuBrev	70	400	1
-TorrCali	0	110	1
-TorrCali	110	215	1
-TorrCali	215	300	1
-UmbeCali	0	38	1
-UmbeCali	38	52	1
-UmbeCali	52	400	1
-FX_R_SEED	0	10	1
-FX_R_SEED	10	40	1
-FX_R_SEED	40	90	1
-NOFX_R_SEED	0	10	1
-NOFX_R_SEED	10	40	1
-NOFX_R_SEED	40	90	1
-NOFX_NOR_SEED	0	10	1
-NOFX_NOR_SEED	10	40	1
-NOFX_NOR_SEED	40	90	1
-
-
-FireIntensityClass_3_DamageTable
->> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
-AbieConc	0	40	1	<<low sample
-AbieConc	40	80	0.714285714	<<low sample
-AbieConc	80	450	0.8	<<guess
-AbieMagn	0	40	1	<<ABCO
-AbieMagn	40	80	0.714285714	<<ABCO
-AbieMagn	80	500	0.8	<<ABCO
-CaloDecu	0	40	0.9	<<guess
-CaloDecu	40	80	0.8	<<guess
-CaloDecu	80	500	0.8	<<low sample
-PinuAlbi	0	30	0.97	<<guess
-PinuAlbi	30	70	0.8	<<guess
-PinuAlbi	70	900	0.8	<<guess
-PinuCont	0	30	1	<<low sample
-PinuCont	30	70	1	<<low sample
-PinuCont	70	250	1	<<low sample
-PinuJeff	0	40	1	<<PIPO
-PinuJeff	40	80	0.736842105	<<PIPO
-PinuJeff	80	500	0.892857143	<<PIPO
-PinuLamb	0	40	1	<<PIPO
-PinuLamb	40	80	0.736842105	<<PIPO
-PinuLamb	80	500	0.892857143	<<PIPO
-PinuMont	0	40	0.97	<<guess
-PinuMont	40	80	0.8	<<guess
-PinuMont	80	550	0.8	<<guess
-PopuTrem	0	30	1	
-PopuTrem	30	70	1	<<guess
-PopuTrem	70	175	0.9	<<guess
-TsugMert	0	30	1	<<guess
-TsugMert	30	70	0.9	<<guess
-TsugMert	70	800	0.8	<<guess
-AcerMacr	0	30	1	
-AcerMacr	30	70	1	
-AcerMacr	70	350	1	
-AlnuRhom	0	30	1	
-AlnuRhom	30	70	1	
-AlnuRhom	70	250	1	
-ArbuMenz	0	30	1	
-ArbuMenz	30	70	0.9	
-ArbuMenz	70	350	0.9	
-JuniOcci	0	30	1	
-JuniOcci	30	70	1	
-JuniOcci	70	200	1	
-LithDens	0	30	1	
-LithDens	30	70	0.9	
-LithDens	70	250	0.9	
-PinuPond	0	40	1	
-PinuPond	40	80	0.736842105	
-PinuPond	80	500	0.892857143	
-PinuSabi	0	40	1	
-PinuSabi	40	80	0.9	
-PinuSabi	80	200	0.9	
-PinuWash	0	40	1	
-PinuWash	40	80	0.736842105	
-PinuWash	80	500	0.892857143	
-PseuMenz	0	40	0.9	
-PseuMenz	40	80	0.976190476	
-PseuMenz	80	650	0.901639344	
-QuerChry	0	30	0.97	
-QuerChry	30	70	0.8	
-QuerChry	70	250	0.7	
-QuerKell	0	30	0.97	
-QuerKell	30	70	0.8	
-QuerKell	70	300	0.7	
-QuerWisl	0	30	1	
-QuerWisl	30	70	1	
-QuerWisl	70	350	1	
-TaxuBrev	0	30	1	
-TaxuBrev	30	70	1	
-TaxuBrev	70	400	1	
-TorrCali	0	30	1	
-TorrCali	30	70	1	
-TorrCali	70	300	1	
-UmbeCali	0	30	1	
-UmbeCali	30	70	1	
-UmbeCali	70	400	1	
-FX_R_SEED	0	10	1	
-FX_R_SEED	10	40	1	
-FX_R_SEED	40	90	1	
-NOFX_R_SEED	0	10	1	
-NOFX_R_SEED	10	40	1	
-NOFX_R_SEED	40	90	1	
-NOFX_NOR_SEED	0	10	1	
-NOFX_NOR_SEED	10	40	1	
-NOFX_NOR_SEED	40	90	1	
